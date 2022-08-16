@@ -1,0 +1,14 @@
+.page-footer {
+  a {
+    color: $primary-color-light;
+  }
+
+  .block-title {
+    @include format-text(h6);
+    text-transform: uppercase;
+  }
+
+  .footer-copyright {
+    @include small();
+  }
+}

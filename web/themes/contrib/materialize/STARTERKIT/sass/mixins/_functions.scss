@@ -1,0 +1,51 @@
+// Convert pixels to rems
+// ==========================================================================
+@function rem($size) {
+  $remSize: $size / 10;
+  @return $remSize * 1rem;
+}
+
+@function px($size) {
+  @return $size * 1px;
+}
+
+// Font weight helper function.
+@function weight($weight: "normal") {
+  $font-weight: $font-weight-normal;
+
+  @if ($weight == "thin") {
+    $font-weight: $font-weight-thin;
+  }
+  @else if($weight == "light") {
+    $font-weight: $font-weight-light;
+  }
+  @else if($weight == "medium") {
+    $font-weight: $font-weight-medium;
+  }
+  @else if($weight == "semibold" or $weight == "semi-bold") {
+    $font-weight: $font-weight-semi-bold;
+  }
+  @else if($weight == "strong" or $weight == "bold") {
+    $font-weight: $font-weight-strong;
+  }
+  @else if($weight == "black") {
+    $font-weight: $font-weight-black;
+  }
+
+  @return $font-weight;
+}
+
+/**
+  Custom darken and lighten function.
+  https://codepen.io/joshmcrty/pen/OVZbBr/
+ */
+@function _darken($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/**
+  Custom lighten function.
+ */
+@function _lighten($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}

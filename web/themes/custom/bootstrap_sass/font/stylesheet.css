@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Geometric Slabserif 712';
+    src: url('GeometricSlabserif712-Light.eot');
+    src: local('Geometric Slabserif 712 Light'), local('GeometricSlabserif712-Light'),
+        url('GeometricSlabserif712-Light.eot?#iefix') format('embedded-opentype'),
+        url('GeometricSlabserif712-Light.woff2') format('woff2'),
+        url('GeometricSlabserif712-Light.woff') format('woff'),
+        url('GeometricSlabserif712-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometric Slabserif 712';
+    src: url('GeometricSlabserif712-LtIt.eot');
+    src: local('Geometric Slabserif 712 Lt It'), local('GeometricSlabserif712-LtIt'),
+        url('GeometricSlabserif712-LtIt.eot?#iefix') format('embedded-opentype'),
+        url('GeometricSlabserif712-LtIt.woff2') format('woff2'),
+        url('GeometricSlabserif712-LtIt.woff') format('woff'),
+        url('GeometricSlabserif712-LtIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geometric Slabserif 712';
+    src: url('GeometricSlabserif712-Medium.eot');
+    src: local('Geometric Slabserif 712 Medium'), local('GeometricSlabserif712-Medium'),
+        url('GeometricSlabserif712-Medium.eot?#iefix') format('embedded-opentype'),
+        url('GeometricSlabserif712-Medium.woff2') format('woff2'),
+        url('GeometricSlabserif712-Medium.woff') format('woff'),
+        url('GeometricSlabserif712-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometric Slabserif 712';
+    src: url('GeometricSlabserif712-ExtBd.eot');
+    src: local('Geometric Slabserif 712 ExtBd'), local('GeometricSlabserif712-ExtBd'),
+        url('GeometricSlabserif712-ExtBd.eot?#iefix') format('embedded-opentype'),
+        url('GeometricSlabserif712-ExtBd.woff2') format('woff2'),
+        url('GeometricSlabserif712-ExtBd.woff') format('woff'),
+        url('GeometricSlabserif712-ExtBd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometric Slabserif 712';
+    src: url('GeometricSlabserif712-Bold.eot');
+    src: local('Geometric Slabserif 712 Bold'), local('GeometricSlabserif712-Bold'),
+        url('GeometricSlabserif712-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GeometricSlabserif712-Bold.woff2') format('woff2'),
+        url('GeometricSlabserif712-Bold.woff') format('woff'),
+        url('GeometricSlabserif712-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometric Slabserif 712';
+    src: url('GeometricSlabserif712-MedIta.eot');
+    src: local('Geometric Slabserif 712 Med Ita'), local('GeometricSlabserif712-MedIta'),
+        url('GeometricSlabserif712-MedIta.eot?#iefix') format('embedded-opentype'),
+        url('GeometricSlabserif712-MedIta.woff2') format('woff2'),
+        url('GeometricSlabserif712-MedIta.woff') format('woff'),
+        url('GeometricSlabserif712-MedIta.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+

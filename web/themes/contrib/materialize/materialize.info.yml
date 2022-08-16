@@ -1,0 +1,38 @@
+name: Materialize
+description: 'Built to use Materialize, a modern responsive front-end framework based on Material Design.'
+type: theme
+package: Materialize
+# project: "materialize"
+core_version_requirement: ^8.8 || ^9
+base theme: false
+# version: VERSION
+regions:
+  top_nav: 'Top navigation'
+  branding_nav: 'Nav bar branding'
+  primary_nav: 'Nav bar primary navigation'
+  mobile_nav: 'Mobile navigation'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  copy: 'Footer copyright'
+  # The page_top and page_bottom regions are hidden, which means they will not
+  # show up on the block layout page. But they are required in order for the
+  # html.html.twig to work properly, so do not delete them.
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - materialize/global-scripts
+  - materialize/global-styling
+
+libraries-override:
+  core/drupal.tableselect: materialize/tableselect
+
+# Information added by Drupal.org packaging script on 2021-11-16
+version: '2.0.0-alpha1'
+project: 'materialize'
+datestamp: 1637073362

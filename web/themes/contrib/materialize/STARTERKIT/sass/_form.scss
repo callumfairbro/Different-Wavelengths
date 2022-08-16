@@ -1,0 +1,59 @@
+/* Form overrides */
+
+form.views-exposed-form {
+  @include form-columns-wrapper();
+  @include form-compact();
+
+  .form-actions,
+  .form-item {
+    @include form-columns(5, 3, 1);
+  }
+}
+
+.views-form div[id=edit-header] {
+  .form-wrapper {
+    @include form-columns-wrapper();
+    @include form-compact();
+
+    .form-actions,
+    .form-item {
+      @include form-columns(2, 2, 1);
+    }
+  }
+}
+
+.field-multiple-table {
+  @include form-compact();
+}
+
+.draggable a.tabledrag-handle {
+  margin-left: 0;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+
+  .handle {
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    width: 16px;
+
+    background-position: 0 0;
+  }
+}
+
+.field--widget-entity-reference-autocomplete {
+  .form-item {
+    button {
+      margin-top: $form-gap;
+    }
+  }
+}
+
+.js input.form-autocomplete.ui-autocomplete-loading {
+  background-repeat: no-repeat;
+}
+
+.form-type-textarea:not(.form-item-text-format-value) + .filter-wrapper {
+  margin-top: -1.5 * $form-gap;
+}

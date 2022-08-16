@@ -1,0 +1,206 @@
+// Mixins
+@mixin font-size($fontSize: 14) {
+  @include size('font-size', $fontSize);
+}
+
+@mixin line-height($leadingSize: 14) {
+  @include size('line-height', $leadingSize);
+}
+
+@mixin letter-spacing($kerningSize: 0) {
+  @include size('letter-spacing', $kerningSize);
+}
+
+@mixin font($fontSize, $leadingSize, $kerningSize) {
+  @include size('font-size', $fontSize);
+  @include size('line-height', $leadingSize);
+  @include size('letter-spacing', $kerningSize);
+}
+
+// Text formatter helper.
+// todo: default color: ability to set color with this var.
+@mixin format-text($type: default, $set-default-color: true) {
+
+  $font-size: 0;
+  $line-height: 0;
+  $kerning-size: 0;
+  $font-weight: 0;
+  $color: 0;
+
+  @if map-has-key($font-style-replacement, $type) {
+    $type: map-get($font-style-replacement, $type);
+  }
+
+  @if ($type == "display-4") {
+    $font-size: $font-size-display-4;
+    $line-height: $line-height-display-4;
+    $kerning-size: $letter-spacing-display-4;
+    $font-weight: $font-weight-display-4;
+    $color: $font-color-display-4;
+  }
+
+  @else if ($type == "display-3") {
+    $font-size: $font-size-display-3;
+    $line-height: $line-height-display-3;
+    $kerning-size: $letter-spacing-display-3;
+    $font-weight: $font-weight-display-3;
+    $color: $font-color-display-3;
+  }
+
+  @else if ($type == "display-2") {
+    $font-size: $font-size-display-2;
+    $line-height: $line-height-display-2;
+    $kerning-size: $letter-spacing-display-2;
+    $font-weight: $font-weight-display-2;
+    $color: $font-color-display-2;
+  }
+
+  @else if ($type == "display-1") {
+    $font-size: $font-size-display-1;
+    $line-height: $line-height-display-1;
+    $kerning-size: $letter-spacing-display-1;
+    $font-weight: $font-weight-display-1;
+    $color: $font-color-display-1;
+  }
+
+  @else if ($type == "headline") {
+    $font-size: $font-size-headline;
+    $line-height: $line-height-headline;
+    $kerning-size: $letter-spacing-headline;
+    $font-weight: $font-weight-headline;
+    $color: $font-color-headline;
+  }
+
+  @else if ($type == "title") {
+    $font-size: $font-size-title;
+    $line-height: $line-height-title;
+    $kerning-size: $letter-spacing-title;
+    $font-weight: $font-weight-title;
+    $color: $font-color-title;
+  }
+
+  @else if ($type == "subhead-2") {
+    $font-size: $font-size-subhead-2;
+    $line-height: $line-height-subhead-2;
+    $kerning-size: $letter-spacing-subhead-2;
+    $font-weight: $font-weight-subhead-2;
+    $color: $font-color-subhead-2;
+  }
+
+  @else if ($type == "subhead-1") {
+    $font-size: $font-size-subhead-1;
+    $line-height: $line-height-subhead-1;
+    $kerning-size: $letter-spacing-subhead-1;
+    $font-weight: $font-weight-subhead-1;
+    $color: $font-color-subhead-1;
+  }
+
+  @else if ($type == "body-2") {
+    $font-size: $font-size-body-2;
+    $line-height: $line-height-body-2;
+    $kerning-size: $letter-spacing-body-2;
+    $font-weight: $font-weight-body-2;
+    $color: $font-color-body-2;
+  }
+
+  @else if ($type == "body-1") {
+    $font-size: $font-size-body-1;
+    $line-height: $line-height-body-1;
+    $kerning-size: $letter-spacing-body-1;
+    $font-weight: $font-weight-body-1;
+    $color: $font-color-body-1;
+  }
+
+  @else if ($type == "caption") {
+    $font-size: $font-size-caption;
+    $line-height: $line-height-caption;
+    $kerning-size: $letter-spacing-caption;
+    $font-weight: $font-weight-caption;
+    $color: $font-color-caption;
+  }
+
+  @else if ($type == "label") {
+    $font-size: $font-size-label;
+    $line-height: $line-height-label;
+    $kerning-size: $letter-spacing-label;
+    $font-weight: $font-weight-label;
+    $color: $font-color-label;
+  }
+
+  @else if ($type == "menu") {
+    $font-size: $font-size-menu;
+    $line-height: $line-height-menu;
+    $kerning-size: $letter-spacing-menu;
+    $font-weight: $font-weight-menu;
+    $color: $font-color-menu;
+  }
+
+  @else if ($type == "button") {
+    $font-size: $font-size-button;
+    $line-height: $line-height-button;
+    $kerning-size: $letter-spacing-button;
+    $font-weight: $font-weight-button;
+    $color: $font-color-button;
+  }
+
+  // Add warn if something wrong.
+  @if ($font-size == 0) {
+    @warn 'No font size defined for ' + $type;
+  }
+
+  // Add warn if something wrong.
+  @if ($color == 0) {
+    @warn 'No font size defined for ' + $type;
+  }
+
+  // Set font size.
+  @include font($font-size,
+    $line-height,
+    $kerning-size);
+  font-weight: $font-weight;
+  text-transform: inherit;
+
+  // Set font-size for smaller devices.
+  @if ($type == 'subhead-2' or
+    $type == 'subhead-1')
+  {
+    @media only screen and (max-width: 960px) {
+      @include font-size($font-size-dv-subhead);
+    }
+  }
+
+  @if ($type == 'body-2' or
+    $type == 'body-1')
+  {
+    // Font-size for device
+    @media only screen and (max-width: 960px) {
+      @include font-size($font-size-dv-body);
+    }
+  }
+
+  @if ($type == 'menu')
+  {
+    // Font-size for device
+    @media only screen and (max-width: 960px) {
+      @include font-size($font-size-dv-menu);
+    }
+  }
+
+  // Set margins.
+  @if ($type == 'display-4' or
+    $type == 'display-3' or
+    $type == 'display-1' or
+    $type == 'display-1')
+  {
+    margin: 0 0 $line-height-title / 2 + 0px 0;
+    margin-bottom: $line-height-title / 20 + 0rem;
+  }
+  @else {
+    margin: 0 0 $line-height-body-1 / 2 + 0px 0;
+    margin-bottom: $line-height-body-1 / 20 + 0rem;
+  }
+
+  @if ($set-default-color) {
+    color: $color;
+  }
+}

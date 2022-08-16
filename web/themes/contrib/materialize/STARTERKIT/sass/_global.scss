@@ -1,0 +1,333 @@
+@import url('//fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import url("//fonts.googleapis.com/icon?family=Material+Icons");
+
+html{
+  font-size: $html-font-size  ;
+  color: $off-black;
+}
+
+html.text-large {
+  font-size: $html-large-font-size;
+}
+
+html.text-small {
+  font-size: $html-small-font-size;
+}
+
+body {
+  @include format-text('default');
+  background-color: $body-bg;
+  color: $primary-text-color;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  @include format-text('h1');
+}
+
+h2 {
+  @include format-text('h2');
+}
+
+h3 {
+  @include format-text('h3');
+}
+
+h4 {
+  @include format-text('h4');
+}
+
+h5 {
+  @include format-text('h5');
+}
+
+h6 {
+  @include format-text('h6');
+}
+
+a {
+  @include link-schema('default', false, false);
+}
+
+.display-4 {
+  @include format-text('display-4');
+}
+
+.display-3 {
+  @include format-text('display-3');
+}
+
+.display-2 {
+  @include format-text('display-2');
+}
+
+.display-1 {
+  @include format-text('display-1');
+}
+
+.headline {
+  @include format-text('headline');
+}
+
+.title {
+  @include format-text('title');
+}
+
+.subhead-2 {
+  @include format-text('subhead-2');
+}
+
+.subhead-1 {
+  @include format-text('subhead-1');
+}
+
+.body-2 {
+  @include format-text('body-2');
+}
+
+.body,
+.body-1 {
+  @include format-text('body-1');
+}
+
+.caption {
+  @include format-text('caption');
+}
+
+.label {
+  @include format-text('label');
+}
+
+.menu {
+  //@include format-text('menu');
+}
+
+.button {
+  @include format-text('button');
+}
+
+.block-block-content,
+article {
+  ul {
+    &:not(.browser-default) {
+      padding-left: 2em;
+      list-style-type: square;
+
+      li {
+        list-style-type: square;
+      }
+    }
+  }
+}
+
+ol {
+  padding-left: 2em;
+}
+
+.block-system-branding-block {
+  a {
+    @include link-schema('main-menu', false, false);
+  }
+}
+
+.region-primary-nav {
+  ul.menu {
+    li {
+      a {
+        @include link-schema('main-menu', false, false);
+
+        &.is-active {
+          background-color: rgba(0, 0, 0, 0.2);
+
+          &:after {
+            content: '...';
+            display: block;
+            text-align: center;
+            line-height: 1em;
+            margin-top: -1em;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+// Breadcrumbs
+.breadcrumb {
+  color: $breadcrumb-link-color;
+  @include font-size($font-size-small);
+
+  &:before {
+    content: $breadcrumb-separator;
+    color: $breadcrumb-separator-color;
+    font-size: inherit;
+    font-weight: $font-weight-thin;
+    vertical-align: middle;
+  }
+
+  &:last-child {
+    color: $breadcrumb-color;
+  }
+}
+
+// Messages.
+
+.messages {
+  background-repeat: no-repeat;
+
+  .message {
+    @include make-s-column(12);
+    @include make-m-column(10);
+    @include make-m-column-offset(1);
+    @include z-level(1);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: 1px solid #FFF;
+  }
+
+  .row {
+    margin-top: 0;
+  }
+
+  &.messages--status .message {
+    background-color: $message-status-bg;
+    color: $message-status-text;
+    border-color: $message-status-border;
+  }
+
+  &.messages--warning .message {
+    background-color: $message-warning-bg;
+    color: $message-warning-text;
+    border-color: $message-warning-border;
+  }
+
+  &.messages--error .message {
+    background-color: $message-error-bg;
+    color: $message-error-text;
+    border-color: $message-error-border;
+  }
+}
+
+/**
+ * Styles for fields.
+ */
+.field {
+  @include clearfix();
+  margin-bottom: 1.2em;
+}
+
+.field--label {
+  font-weight: bold;
+  @include small();
+}
+
+.field--label-inline {
+  .field--label,
+  > .field--item,
+  .field--items {
+    float: left; /* LTR */
+  }
+
+  .field--label {
+    padding-right: 0.5em;
+  }
+
+  .field--label::after {
+    content: ':';
+  }
+}
+
+[dir="rtl"] .field--label-inline .field--label,
+[dir="rtl"] .field--label-inline .field--items {
+  padding-left: 0.5em;
+  padding-right: 0;
+}
+
+.field--item {
+  > p {
+    margin-top: 0;
+  }
+}
+
+/*
+ * Collapsible styles
+ */
+
+.collapsible-body {
+  background-color: $collapsible-body-bg;
+}
+
+// Tabs
+.tabs {
+  margin-bottom: 2em;
+  padding-left: 0;
+  border-bottom: 1px solid color('grey', 'lighten-2');
+  background-color: $tabs-bg-color;
+
+  ul {
+    margin: 0;
+  }
+
+  a.is-active {
+    color: $tabs-text-color;
+    border-bottom: 2px solid $tabs-underline-color;
+  }
+}
+
+.tabs.tabs--secondary {
+  border-bottom: 1px solid color('grey', 'lighten-3');
+
+  li {
+    &, a {
+      font-size: 90%;
+    }
+  }
+}
+
+// Pager
+.pager {
+  @include z-depth(0);
+  @include bg-color("transparent");
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+    &.is-active a { color: #fff; }
+    &.is-active { background-color: $primary-color; }
+  }
+}
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

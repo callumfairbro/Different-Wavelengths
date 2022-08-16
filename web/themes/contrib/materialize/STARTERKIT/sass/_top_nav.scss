@@ -1,0 +1,32 @@
+.top-navigation {
+  background-color: $primary-color-dark;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  .region-top-nav {
+    color: color($secondary-color-name, 'lighten-3');
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    //@include small();
+
+    a {
+      @include small();
+      color: $primary-color-light;
+    }
+    ul li {
+      display: inline;
+      padding: 0 15px;
+
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+{
+    "name": "drupal/materialize",
+    "description": "Drush commands for Materialize Drupal theme.",
+    "type": "drupal-theme",
+    "authors": [
+        {
+            "name": "Denes Szabo",
+            "email": "denes.szabo@internod.ehu"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9"
+            }
+        }
+    }
+}

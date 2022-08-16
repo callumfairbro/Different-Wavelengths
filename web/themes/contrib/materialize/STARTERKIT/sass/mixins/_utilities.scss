@@ -1,0 +1,78 @@
+// Adds rem size with pixel fallback, not for shorthand units
+// ==========================================================================
+@mixin size($property, $size, $shorthand:null) {
+  @if $shorthand {
+    #{$property}: px($size) $shorthand;
+    #{$property}: rem($size) $shorthand;
+  }
+  @else {
+    #{$property}: px($size);
+    #{$property}: rem($size);
+  }
+}
+
+// Build link colors.
+@mixin link-colors($link, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $link;
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+  @if $hover {
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+// Apply link colors schema to link.
+@mixin link-schema($schema: 'default', $underline: null, $underline_hover: null) {
+  @if map-has-key($link-schemas, $schema) {
+    $colors: map-get($link-schemas, $schema);
+    @include link-colors(
+        map-get($colors, 'link'),
+        map-get($colors, 'hover'),
+        map-get($colors, 'active'),
+        map-get($colors, 'visited'),
+        map-get($colors, 'focus')
+    );
+  }
+  @else {
+    @warn $schema + ' link schema not found!';
+  }
+
+  // Null means do not set
+  @if ($underline != null) {
+    @if $underline {
+      text-decoration: underline;
+    }
+    @else {
+      text-decoration: none;
+    }
+  }
+  @if ($underline_hover != null) {
+    @if $underline_hover {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @else {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+

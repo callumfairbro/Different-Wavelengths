@@ -1,0 +1,16 @@
+// Get the icon liga or character code.
+@function get_icon($liga) {
+  $icon: "not-found";
+
+  @if map-has-key($materialize-icons, $liga) {
+    @if ($icons-use-ligature) {
+      $icon: $liga;
+    }
+    @else {
+      // Get the character code for icon.
+      $icon: map-get($materialize-icons, $liga);
+    }
+  }
+
+  @return $icon;
+}

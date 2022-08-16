@@ -1,0 +1,43 @@
+.views-field-node-bulk-form {
+  .form-item {
+    margin: 0;
+  }
+}
+
+body:not(.toolbar-vertical) .system-themes-list-uninstalled,
+body:not(.toolbar-vertical) .system-themes-list-installed {
+  @include make-row();
+
+  .system-themes-list__header {
+    @include make-s-column(12);
+  }
+
+  .theme-selector {
+    @include make-s-column(12);
+    @include make-m-column(6);
+    @include make-xl-column(4);
+
+    .no-screenshot
+    .screenshot,
+    img {
+      display: block;
+      float: none;
+
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
+
+    .operations {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      li {
+        float: none;
+        border: none;
+        padding: 0 5px;
+      }
+    }
+  }
+}

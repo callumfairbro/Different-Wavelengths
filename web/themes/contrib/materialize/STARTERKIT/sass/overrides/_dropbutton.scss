@@ -1,0 +1,97 @@
+.js {
+
+  td {
+    .dropbutton-multiple {
+      height: $button-floating-size;
+      margin-right: 0;
+      padding-right: 0;
+    }
+
+    .dropbutton-widget {
+      position: relative;
+    }
+  }
+
+  .dropbutton-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .dropbutton-widget {
+      padding: 0;
+    }
+
+    ul.dropbutton {
+      overflow: visible;
+      width: 100%;
+      min-height: $button-floating-size;
+      position: relative;
+
+      li:first-child {
+        display: none;
+      }
+
+      li.dropbutton-toggle {
+        display: block;
+        width: 100%;
+        height: $button-floating-size;
+        width: $button-floating-size;
+        text-indent: 0;
+        @include btn-floating();
+        @include button-icon-after('more_vert');
+
+        @include z-depth(0);
+        background-color: transparent;
+        color: $button-floating-color;
+
+        &:hover {
+          color: _darken($button-floating-color, 10);
+        }
+
+        &:after {
+          text-align: center;
+          margin: 0;
+          width: 100%;
+        }
+
+        button {
+          display: none;
+        }
+
+      }
+    }
+  }
+
+  .dropbutton-wrapper.open {
+    ul.dropbutton {
+      @include dropdown-content();
+      //z-index: 999;
+      //visibility: visible;
+
+      li:first-child {
+        display: block;
+      }
+
+      li.dropbutton-toggle {
+        display: none;
+      }
+    }
+  }
+
+  .dropbutton-wrapper.dropbutton-single {
+    ul.dropbutton {
+      overflow: visible;
+      width: 100%;
+
+      li:first-child {
+        display: block;
+      }
+
+      li a {
+        @include button-flat();
+        @include small();
+      }
+    }
+  }
+}
+

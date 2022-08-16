@@ -1,0 +1,19 @@
+diff --git a/scripts/tableselect.js b/scripts/tableselect.js
+index e2fd8f4..3e0f6ee 100644
+--- a/scripts/tableselect.js
++++ b/scripts/tableselect.js
+@@ -39,9 +39,12 @@
+     };
+ 
+     var $selectAllCheckbox = $('<input type="checkbox" class="form-checkbox" />').attr('title', strings.selectAll).uniqueId();
+-    var $selectAllLabel = $('<label>').attr('for', $selectAllCheckbox.attr('id'));
+ 
+-    $table.find('th.select-all').prepend($selectAllCheckbox).append($selectAllLabel).on('click', function (event) {
++    var $selectAllLabel = $('<label>').attr('for', $selectAllCheckbox.attr('id')).attr('title', strings.selectAll).append($selectAllCheckbox).append('<i class="helper">').append('<span>');
++
++    var $selectAllWrapper = $('<div class="js-form-item form-item js-form-type-checkbox form-type-checkbox form-no-label">').append($selectAllLabel);
++
++    $table.find('th.select-all').prepend($selectAllWrapper).on('click', function (event) {
+       if ($(event.target).is('input[type="checkbox"]')) {
+         checkboxes.each(function () {
+           var $checkbox = $(this);

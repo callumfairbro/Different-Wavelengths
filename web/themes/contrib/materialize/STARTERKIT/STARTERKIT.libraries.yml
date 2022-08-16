@@ -1,0 +1,27 @@
+global-styling:
+  css:
+    theme:
+      css/materialize-drupal.css: {}
+      css/style.css: {}
+
+  # If this library had JavaScript you could specify it like this:
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+
+waves:
+  version: VERSION
+  js:
+    js/vendor/waves/waves.min.js: {}
+
+mobile-events:
+  version: VERSION
+  js:
+    js/vendor/jquery.mobile-events.min.js: {}
+  dependencies:
+      - core/jquery

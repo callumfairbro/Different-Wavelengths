@@ -1,0 +1,503 @@
+@import "drupal-bootstrap/component/alert";
+@import "drupal-bootstrap/component/ajax";
+@import "drupal-bootstrap/component/field";
+@import "drupal-bootstrap/component/file";
+@import "drupal-bootstrap/component/filter";
+@import "drupal-bootstrap/component/form";
+@import "drupal-bootstrap/component/icon";
+@import "drupal-bootstrap/component/navbar";
+@import "drupal-bootstrap/component/node";
+@import "drupal-bootstrap/component/panel";
+@import "drupal-bootstrap/component/progress-bar";
+@import "drupal-bootstrap/component/table-drag";
+@import "drupal-bootstrap/component/tabs";
+@import "drupal-bootstrap/component/toolbar";
+
+// jQuery UI style overrides.
+@import "drupal-bootstrap/jquery-ui/autocomplete";
+
+// Variables
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+// Entire site
+
+body {
+  font-family: Geometric Slabserif;
+
+  .footer {
+    width: 100%;
+    background-color: #f8f8f8;
+    border: none;
+    
+    .region-footer {
+      margin: auto;
+      width: 90%;
+
+      a {
+        color: #777;
+        position: relative;
+        width: fit-content;
+        padding: 0;
+      }
+      a:hover {
+        background-color: transparent;
+      }
+
+      a:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #777;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+      }
+      a:hover:before {
+        visibility: visible;
+        width: 100%;
+      }
+
+      span {
+        display: none;
+      }
+
+    }
+
+  }
+  
+  .author {
+    display: none;
+  }
+
+}
+
+// Home page
+
+.page-node-type-landing-page {
+  background-color: black;
+  background-image: url(../images/first_gig.jpeg);
+  background-size: cover;
+  background-repeat: none;
+  
+  .field--name-field-header {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0.5em;
+    margin: 7em auto 7em auto;
+    border-style: solid;
+    border-width: 0.2em;
+    width: fit-content;
+    text-transform: uppercase; 
+
+    // Underline on hover
+    a {
+      position: relative;
+      color: white;
+      text-decoration: none;
+    }
+    a:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #FFF;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+    a:hover:before {
+      visibility: visible;
+      width: 100%;
+    }
+    
+  }
+
+  .page-header, .region-footer, .footer {
+    display:none;
+  }
+
+}
+
+// Gigs page
+
+.page-node-type-gig-page {
+  
+  .region-header {
+
+    .page-header {
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      padding: 0.5em;
+      margin: 1em auto 1em auto;
+      border-style: solid;
+      border-width: 0.2em;
+      border-color: black;
+      width: fit-content;
+      text-transform: uppercase; 
+      
+    }  
+
+  }
+
+  .main-container {
+    width: 90%;
+
+    .field--name-field-gig-paragraph {
+      display:flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+
+      .field--item {
+        flex: 30%;
+        margin: 0 auto;
+        background-color: #F3F3F3;
+        border-radius: 5px;
+
+        // Need to add media queries to change flex % on smaller screens
+
+        img {
+          height: 300px;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+
+        .field--name-field-header {
+          font-size: 18px;
+          font-weight: bold;
+          padding: 10px;
+        }
+
+        .field--name-field-date {
+          font-style: italic;
+          padding: 10px;
+        }
+
+        .field--name-field-text {
+          padding: 10px;
+        }
+
+      }
+    }
+  
+  }
+}
+
+// Photos page
+
+.page-node-type-photos-page {
+
+  .region-header {
+
+    .page-header {
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      padding: 0.5em;
+      margin: 1em auto 1em auto;
+      border-style: solid;
+      border-width: 0.2em;
+      border-color: black;
+      width: fit-content;
+      text-transform: uppercase; 
+      
+    }  
+  
+  }
+
+  .main-container {
+    width: 90%;
+
+    .field--name-field-media-paragraph {
+      display:flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+  
+      .field--item {
+        height: 300px;
+        position: relative;
+        flex: 1 1 auto;
+        transition: transform 1s;
+        
+        img, iframe {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          vertical-align: middle;
+          border-radius: 5px;
+        }
+
+        .field--name-field-text {
+          display: none;
+        }
+      
+      }
+  
+      // .field--item:hover {
+      //   padding: 0.6rem;
+      //   transform: scale(1.2);
+      //   z-index: 99;
+      // }
+  
+    }
+  
+    // .field--name-field-media-paragraph::after {
+    //   content: "";
+    //   flex-grow: 999;
+    // }
+
+  }
+
+}
+
+// Contact page
+
+.page-node-type-contact {
+
+  background-color: black;
+  background-image: url(../images/band_photo.jpeg);
+  background-size: cover;
+  background-repeat: none;
+
+  .main-container {
+    max-width: 70%;
+    
+    .page-header {
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      padding: 0.5em;
+      margin: 1em auto 1em auto;
+      border-style: solid;
+      border-width: 0.2em;
+      border-color: black;
+      width: fit-content;
+      text-transform: uppercase; 
+    }
+
+    .region-header {
+      background-color: whitesmoke;
+      opacity: 0.9;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      margin-top: 1.5em;
+      margin-bottom: 2em;
+    }
+
+    .region {
+      border-style: solid;
+      border-width: 10px;
+      border-color: grey;
+    }
+
+    .region-content {
+      background-color: whitesmoke;
+      opacity: 0.9;
+
+      .content {
+        padding: 4em;
+
+        .field--name-field-paragraph {
+          font-size: 1.5em;
+          padding-bottom: 1.5em;
+          text-align: center;
+        }
+
+        .webform-button--submit {
+          font-size: 20px;
+          border-radius: 0;
+          background-color: unset;
+          border-style: none;
+          transition: all 0.5s;
+          margin-top: 1em;
+        }
+        
+      }
+    }
+  }
+}
+
+// Navbar
+
+.navbar {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &-nav {
+    .nav-link {
+      padding-top: .715rem;
+      padding-bottom: .715rem;
+    }
+  }
+
+  &-brand {
+    margin-right: 2rem;
+  }
+}
+
+.bg-primary {
+  background-color: theme-color("primary") !important;
+}
+
+.bg-light {
+  border: 1px solid rgba(0, 0, 0, .1);
+
+  &.navbar-fixed-top {
+    border-width: 0 0 1px;
+  }
+
+  &.navbar-bottom-top {
+    border-width: 1px 0 0;
+  }
+}
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+// Buttons
+
+.btn {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+
+  &-sm {
+    font-size: 10px;
+  }
+
+  &-warning {
+    &,
+    &:hover,
+    &:not([disabled]):not(.disabled):active,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.btn-outline-secondary {
+  border-color: $gray-600;
+  color: $gray-600;
+
+  &:not([disabled]):not(.disabled):hover,
+  &:not([disabled]):not(.disabled):focus,
+  &:not([disabled]):not(.disabled):active {
+    background-color: $gray-400;
+    border-color: $gray-400;
+    color: $white;
+  }
+
+  &:not([disabled]):not(.disabled):focus {
+    box-shadow: 0 0 0 .2rem rgba($gray-400, .5);
+  }
+}
+
+[class*="btn-outline-"] {
+  border-width: 2px;
+}
+
+.border-secondary {
+  border: 1px solid $gray-400 !important;
+}
+
+// Typography
+
+body {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.text-secondary {
+  color: $body-color !important;
+}
+
+// Tables
+
+th {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+}
+
+.table {
+  th,
+  td {
+    padding: 1.5rem;
+  }
+
+  &-sm {
+    th,
+    td {
+      padding: .75rem;
+    }
+  }
+}
+
+// Navs
+
+.dropdown-menu {
+  font-size: $font-size-sm;
+  text-transform: none;
+}
+
+// Indicators
+
+.badge {
+  padding-top: .28rem;
+
+  &-pill {
+    border-radius: 10rem;
+  }
+
+  &.bg-secondary,
+  &.bg-light {
+    color: $dark;
+  }
+}
+
+// Containers
+
+.list-group-item {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: inherit;
+  }
+}
+
+.card {
+  &-title,
+  &-header {
+    color: inherit;
+  }
+}

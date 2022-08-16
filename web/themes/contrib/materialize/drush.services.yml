@@ -1,0 +1,5 @@
+services:
+  materialize.subthemehelper.commands:
+    class: Drush\Commands\materialize\SubThemeCommands
+    tags:
+      - { name: drush.command }

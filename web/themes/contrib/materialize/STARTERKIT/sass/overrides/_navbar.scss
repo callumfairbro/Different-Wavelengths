@@ -1,0 +1,36 @@
+nav.main-navigation {
+
+  overflow: hidden;
+
+  .row {
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    left: auto;
+    transform: translateX(0);
+  }
+
+  a.sidenav-trigger {
+    float: none;
+    margin: 0;
+    padding: 0 18px;
+
+    &, i {
+      color: $navbar-font-color;
+    }
+
+    @media #{$large-and-up} {
+      display: none;
+    }
+  }
+
+  ul.menu {
+    li {
+      margin: 0;
+    }
+    a {
+      font-size: $navbar-font-size;
+    }
+  }
+}

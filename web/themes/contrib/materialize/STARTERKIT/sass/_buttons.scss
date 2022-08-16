@@ -1,0 +1,62 @@
+// Button styles
+
+.button,
+.btn {
+  @include button();
+}
+
+.button--primary {
+  @include button-primary();
+  @include button-icon-after('send');
+}
+
+.btn-info {
+  @include button-info();
+}
+
+.btn-success {
+  @include button-success();
+}
+
+.btn-warning {
+  @include button-warning();
+}
+
+.button-danger,
+.btn-danger {
+  @include button-danger();
+}
+
+.btn.field-add-more-submit,
+.btn[href^="/node/add"] {
+  @include button-icon-before('add');
+}
+
+.btn[value="Preview"] {
+  @include button-icon-after('visibility');
+}
+
+.btn[value="Filter"] {
+  @include button-icon-after('filter_list');
+}
+
+.btn-link,
+button.link,
+button.tabledrag-toggle-weight {
+  @include button-flat();
+}
+
+button.tabledrag-toggle-weight {
+  @include button-icon-before('list');
+}
+
+.control-label {
+  .link-edit-summary {
+    @include button-flat();
+  }
+}
+
+// Buttons
+.btn-noclick {
+  cursor: default;
+}

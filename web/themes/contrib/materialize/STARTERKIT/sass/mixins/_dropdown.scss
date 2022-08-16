@@ -1,0 +1,60 @@
+@mixin dropdown-content() {
+  &:focus {
+    outline: 0;
+  }
+
+  @include z-depth(1);
+  background-color: $dropdown-bg-color;
+  margin: 0;
+  min-width: 100px;
+  //overflow-y: auto;
+  //position: absolute;
+  transform-origin: 0 0;
+
+  li {
+    &:hover, &.active {
+      background-color: $dropdown-hover-bg-color;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: darken($dropdown-hover-bg-color, 8%);
+    }
+
+    &.divider {
+      min-height: 0;
+      height: 1px;
+    }
+
+    & > a, & > span {
+      font-size: $font-size-menu;
+      color: $dropdown-color;
+      display: block;
+      line-height: 22px;
+      padding: (($dropdown-item-height - 22) / 2) 16px;
+    }
+
+    & > span > label {
+      top: 1px;
+      left: 0;
+      height: 18px;
+    }
+
+    // Icon alignment override
+    & > a > i {
+      height: inherit;
+      line-height: inherit;
+      float: left;
+      margin: 0 24px 0 0;
+      width: 24px;
+    }
+
+    clear: both;
+    color: $off-black;
+    cursor: pointer;
+    min-height: $dropdown-item-height;
+    //line-height: 1.5rem;
+    //width: 100%;
+    //text-align: left;
+  }
+}
