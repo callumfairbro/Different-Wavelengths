@@ -2578,3 +2578,13 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
+
+
+// $(window).on('load', function () {
+//   var $image = document.getElementsByClassName(".field--name-field-image");
+//   console.log("Test 1");
+//   $image.onclick(function () {
+//     $image.addClass('active');
+//     console.log("Test 2");
+//   });
+// })(jQuery);

@@ -2,19 +2,22 @@ framework:
   css:
     theme:
       css/style.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: { type: external, minified: true }
   js:
-   bootstrap/assets/javascripts/bootstrap/affix.js: {}
-   bootstrap/assets/javascripts/bootstrap/alert.js: {}
-   bootstrap/assets/javascripts/bootstrap/button.js: {}
-   bootstrap/assets/javascripts/bootstrap/carousel.js: {}
-   bootstrap/assets/javascripts/bootstrap/collapse.js: {}
-   bootstrap/assets/javascripts/bootstrap/dropdown.js: {}
-   bootstrap/assets/javascripts/bootstrap/modal.js: {}
-   bootstrap/assets/javascripts/bootstrap/tooltip.js: {}
-   bootstrap/assets/javascripts/bootstrap/popover.js: {}
-   bootstrap/assets/javascripts/bootstrap/scrollspy.js: {}
-   bootstrap/assets/javascripts/bootstrap/tab.js: {}
-   bootstrap/assets/javascripts/bootstrap/transition.js: {}
+    bootstrap/assets/javascripts/bootstrap/affix.js: {}
+    bootstrap/assets/javascripts/bootstrap/alert.js: {}
+    bootstrap/assets/javascripts/bootstrap/button.js: {}
+    bootstrap/assets/javascripts/bootstrap/carousel.js: {}
+    bootstrap/assets/javascripts/bootstrap/collapse.js: {}
+    bootstrap/assets/javascripts/bootstrap/dropdown.js: {}
+    bootstrap/assets/javascripts/bootstrap/modal.js: {}
+    bootstrap/assets/javascripts/bootstrap/tooltip.js: {}
+    bootstrap/assets/javascripts/bootstrap/popover.js: {}
+    bootstrap/assets/javascripts/bootstrap/scrollspy.js: {}
+    bootstrap/assets/javascripts/bootstrap/tab.js: {}
+    bootstrap/assets/javascripts/bootstrap/transition.js: {}
+    js/scripts.js: {}
+    http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js: { type: external, minified: true }
 
 # Uncomment for LESS source JavaScript files.
 #  js:
