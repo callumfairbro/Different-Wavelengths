@@ -7982,11 +7982,6 @@ body .page-header {
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .view-content .views-row {
   width: 30%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content .views-row .field--name-field-media-image,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .view-content .views-row .field--name-field-media-image {
-  border-top: solid;
-  border-top-width: 1px;
-}
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home a,
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home a {
   color: white;
@@ -8037,6 +8032,8 @@ body .page-header {
 }
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row .views-field a .picture div .field--name-field-media-image {
   height: 100%;
+  border-top: solid;
+  border-top-width: 1px;
 }
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row .views-field a .picture div .field--name-field-media-image .field--item {
   height: 100%;
@@ -8071,16 +8068,13 @@ body .page-header {
      object-fit: cover;
   border-radius: 10px;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content .paragraph--type--video {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-oembed-video {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content .paragraph--type--video .field--name-field-media-oembed-video {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-oembed-video div {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content .paragraph--type--video .field--name-field-media-oembed-video div {
-  height: 100%;
-}
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content .paragraph--type--video .field--name-field-media-oembed-video div iframe {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-oembed-video div iframe {
   width: 100%;
   height: 100%;
   border-radius: 10px;

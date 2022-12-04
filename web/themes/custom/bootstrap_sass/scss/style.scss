@@ -235,11 +235,6 @@ body {
           justify-content: center;
           .views-row {
             width: 30%;
-            .field--name-field-media-image {
-              border-top: solid;
-              border-top-width: 1px;
-            }
-
           }
         }
         a {
@@ -287,6 +282,8 @@ body {
                   height: 100%;
                   .field--name-field-media-image {
                     height: 100%;
+                    border-top: solid;
+                    border-top-width: 1px;
                     .field--item {
                       height: 100%;
                       img {
@@ -323,9 +320,6 @@ body {
                     }
                   }
                 }
-              }
-              .paragraph--type--video {
-                height: 100%;
                 .field--name-field-media-oembed-video {
                   height: 100%;
                   div {
