@@ -162,12 +162,14 @@
 
           function addJsScroll() {
             $('.landing-page .paragraph--type--text').addClass('js-scroll');
-            $('.landing-page .view-list-home').addClass('js-scroll');
+            $('.landing-page .view-list-gig-home').addClass('js-scroll');
+            $('.landing-page .view-list-media-home').addClass('js-scroll');
             $('#block-homecontact').addClass('js-scroll');
+      
 
             $('.landing-page .paragraph--type--text').addClass('fade-in');
-            $('.landing-page .view-display-id-home_gigs').addClass('slide-left');
-            $('.landing-page .view-display-id-home_gallery').addClass('slide-right');
+            $('.landing-page .view-list-gig-home').addClass('slide-left');
+            $('.landing-page .view-list-media-home').addClass('slide-right');
             $('#block-homecontact').addClass('fade-in-bottom');
           }
 

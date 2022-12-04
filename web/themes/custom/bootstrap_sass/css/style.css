@@ -7968,46 +7968,37 @@ body .page-header {
   width: 80%;
   margin: 100px auto;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home {
   margin: 100px 0;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .view-content {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content {
   display: flex;
   gap: 100px;
   justify-content: center;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content .views-row,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .view-content .views-row {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content .views-row {
   width: 30%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content .views-row .field--name-field-media-image,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .view-content .views-row .field--name-field-media-image {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content .views-row .field--name-field-media-image {
   border-top: solid;
   border-top-width: 1px;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home a,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home a {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home a {
   color: white;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home a:hover,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home a:hover {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home a:hover {
   text-decoration: none;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .heading,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .heading {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .heading {
   width: 80%;
   text-align: center;
   margin: 50px auto;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .heading h1,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .heading h1 {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .heading h1 {
   color: white;
   margin-bottom: 25px;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .heading .text,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .heading .text {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .heading .text {
   font-size: 18px;
 }
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row {
@@ -8050,37 +8041,37 @@ body .page-header {
   aspect-ratio: 1/1;
   border-radius: 10px;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content .paragraph--type--image {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content .paragraph--type--image .field--name-field-image {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-image {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content .paragraph--type--image .field--name-field-image img {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-image .field--item {
+  height: 100%;
+}
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-image .field--item img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content .paragraph--type--video {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content .paragraph--type--video {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content .paragraph--type--video .field--name-field-media {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content .paragraph--type--video .field--name-field-media-oembed-video {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content .paragraph--type--video .field--name-field-media div {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content .paragraph--type--video .field--name-field-media-oembed-video div {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content .paragraph--type--video .field--name-field-media div .field--name-field-media-oembed-video {
-  height: 100%;
-}
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-field-paragraph .field-content .paragraph--type--video .field--name-field-media div .field--name-field-media-oembed-video iframe {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content .paragraph--type--video .field--name-field-media-oembed-video div iframe {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -8476,6 +8467,7 @@ body .page-header {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  background: transparent;
 }
 @media (max-width: 768px) {
   .page-node-type-photos-page .main-container {
