@@ -7,4 +7,5 @@ RewriteBase /
 RewriteCond %{REQUEST_URI} !^/web
 RewriteRule ^(.*)$ /web/
 
+
 </IfModule>
