@@ -8071,10 +8071,7 @@ body .page-header {
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-oembed-video {
   height: 100%;
 }
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-oembed-video div {
-  height: 100%;
-}
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-oembed-video div iframe {
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .views-row .views-field-rendered-entity .field-content div .field--name-field-media-oembed-video iframe {
   width: 100%;
   height: 100%;
   border-radius: 10px;

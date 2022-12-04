@@ -322,13 +322,10 @@ body {
                 }
                 .field--name-field-media-oembed-video {
                   height: 100%;
-                  div {
+                  iframe {
+                    width: 100%;
                     height: 100%;
-                    iframe {
-                      width: 100%;
-                      height: 100%;
-                      border-radius: 10px;
-                    }
+                    border-radius: 10px;
                   }
                 }
               }
