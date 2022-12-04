@@ -260,6 +260,8 @@ body {
         .views-row {
           background: $light-grey;
           color: $almost-black;
+          border-radius: 10px;
+          overflow: hidden;
           // -webkit-box-shadow: white 1px 3px 4px;
           // -moz-box-shadow: white 1px 3px 4px;
           // box-shadow: white 1px 3px 4px;
@@ -494,14 +496,14 @@ body {
       .field--name-field-view-reference {
         .view-list-gig-home,
         .view-list-media-home {
+          .heading {
+            .text {
+              font-size: 16px;
+            }
+          }
           .view-content {
             .views-row {
               width: 80%;
-              .heading {
-                .text {
-                  font-size: 16px;
-                }
-              }
             }
           }
         } 
@@ -1327,6 +1329,7 @@ body {
       display: block;
       border-style: none;
       padding: 0;
+      background-color: transparent;
       .icon-bar {
         background: white;
       }

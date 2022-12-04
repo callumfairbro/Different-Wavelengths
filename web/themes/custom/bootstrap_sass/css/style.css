@@ -8008,6 +8008,8 @@ body .page-header {
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row {
   background: #F3F3F3;
   color: #17141d;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row .views-field {
   height: 100%;
@@ -8245,13 +8247,13 @@ body .page-header {
   .page-node-type-landing-page .main-container .paragraph--type--text .field--name-field-text {
     font-size: 16px;
   }
+  .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .heading .text,
+.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .heading .text {
+    font-size: 16px;
+  }
   .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content .views-row,
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .view-content .views-row {
     width: 80%;
-  }
-  .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .view-content .views-row .heading .text,
-.page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-media-home .view-content .views-row .heading .text {
-    font-size: 16px;
   }
   .page-node-type-landing-page .main-container .block-block-content .heading {
     margin: 0 auto;
@@ -8943,6 +8945,7 @@ body .page-header {
     display: block;
     border-style: none;
     padding: 0;
+    background-color: transparent;
   }
   #navbar .navbar-toggle .icon-bar {
     background: white;
