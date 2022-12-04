@@ -170,9 +170,9 @@ $databases = [];
  * information on these defaults and the potential issues.
  *
  * More details can be found in the constructor methods for each driver:
- * - \Drupal\Core\Database\Driver\mysql\Connection::__construct()
- * - \Drupal\Core\Database\Driver\pgsql\Connection::__construct()
- * - \Drupal\Core\Database\Driver\sqlite\Connection::__construct()
+ * - \Drupal\mysql\Driver\Database\mysql\Connection::__construct()
+ * - \Drupal\pgsql\Driver\Database\pgsql\Connection::__construct()
+ * - \Drupal\sqlite\Driver\Database\sqlite\Connection::__construct()
  *
  * Sample Database configuration format for PostgreSQL (pgsql):
  * @code
@@ -249,7 +249,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'jgt07AM5-rqOjvfHhUQe6QLM6GrPwwnFemLHCSE_3vAOjhdvzx6wT3vi4sTp4rqewBf8j4wvnw';
+$settings['hash_salt'] = 'AsRMV1IDVUMmSqDHNeiS_xtWJhM97YUci7gdG6dgDvY0z1IHgVfB50KQl6osMO0KyFrC2uQ_2w';
 
 /**
  * Deployment identifier.
@@ -785,10 +785,11 @@ $databases['default']['default'] = array (
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'driver' => 'mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_uQbFabco6eMiy7CyJPprpph5UUKTw4LoG-2uM40MCI1birxxVkjMw_bPbltp8-CtBJnKfdP7Kw/sync';
+$settings['config_sync_directory'] = 'sites/default/files/config_GXrPBSYtXlpnUgJyEOiIpOhA5X2kSXPjgBoRaII-yzPZx9i9e213das1stoYEjcyVjS_q3OiKw/sync';
 
 if (isset($GLOBALS['request']) and '/web/index.php' === $GLOBALS['request']->server->get('SCRIPT_NAME')) {
 $GLOBALS['request']->server->set('SCRIPT_NAME', '/index.php');
