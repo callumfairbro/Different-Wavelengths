@@ -226,7 +226,8 @@ body {
     .field--name-field-view-reference {
       width: 80%;
       margin: 100px auto;
-      .view-list-home {
+      .view-list-gig-home,
+      .view-list-media-home {
         margin: 100px 0;
         .view-content {
           display: flex;
@@ -259,86 +260,86 @@ body {
             font-size: 18px;
           }
         }
-        &.view-display-id-home_gigs {
-          .views-row {
-            background: $light-grey;
-            color: $almost-black;
-            // -webkit-box-shadow: white 1px 3px 4px;
-            // -moz-box-shadow: white 1px 3px 4px;
-            // box-shadow: white 1px 3px 4px;
-            .views-field {
+      }
+      .view-list-gig-home {
+        .views-row {
+          background: $light-grey;
+          color: $almost-black;
+          // -webkit-box-shadow: white 1px 3px 4px;
+          // -moz-box-shadow: white 1px 3px 4px;
+          // box-shadow: white 1px 3px 4px;
+          .views-field {
+            height: 100%;
+            a {
               height: 100%;
-              a {
+              color: $almost-black;
+              display: flex;
+              flex-flow: column;
+              justify-content: space-between;
+              .content {
+                font-size: 16px;
+                padding: 20px;
+              }
+              .picture {
+                aspect-ratio: 1 / 0.8;
                 height: 100%;
-                color: $almost-black;
-                display: flex;
-                flex-flow: column;
-                justify-content: space-between;
-                .content {
-                  font-size: 16px;
-                  padding: 20px;
-                }
-                .picture {
-                  aspect-ratio: 1 / 0.8;
+                div {
                   height: 100%;
-                  div {
+                  .field--name-field-media-image {
                     height: 100%;
-                    .field--name-field-media-image {
+                    .field--item {
                       height: 100%;
-                      .field--item {
+                      img {
                         height: 100%;
-                        img {
-                          height: 100%;
-                          object-fit: cover;
-                        }
+                        object-fit: cover;
                       }
                     }
                   }
                 }
               }
             }
-            
           }
+          
         }
-        &.view-display-id-home_gallery {
-          .views-row {
-            aspect-ratio : 1 / 1;
-            border-radius: 10px;
-            .views-field-field-paragraph {
+      }
+      .view-list-media-home {
+        .views-row {
+          aspect-ratio : 1 / 1;
+          border-radius: 10px;
+          .views-field-field-paragraph {
+            height: 100%;
+            .field-content {
               height: 100%;
-              .field-content {
+              .paragraph--type--image {
                 height: 100%;
-                .paragraph--type--image {
+                .field--name-field-image {
                   height: 100%;
-                  .field--name-field-image {
+                  img {
                     height: 100%;
-                    img {
-                      height: 100%;
-                      object-fit: cover;
-                      border-radius: 10px;
-                    }
-                  }
-                }
-                .paragraph--type--video {
-                  height: 100%;
-                  .field--name-field-media {
-                    height: 100%;
-                    div {
-                      height: 100%;
-                      .field--name-field-media-oembed-video {
-                        height: 100%;
-                        iframe {
-                          width: 100%;
-                          height: 100%;
-                          border-radius: 10px;
-                        }
-                      }  
-                    }
+                    object-fit: cover;
+                    border-radius: 10px;
                   }
                 }
               }
-            }          
-          }
+              .paragraph--type--video {
+                height: 100%;
+                .field--name-field-media {
+                  height: 100%;
+                  div {
+                    height: 100%;
+                    .field--name-field-media-oembed-video {
+                      height: 100%;
+                      iframe {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                      }
+                    }  
+                  }
+                }
+              }
+            }
+          }          
         }
       }
     }
@@ -425,8 +426,8 @@ body {
     .main-container {
       .field--name-field-view-reference {
         width: 100%;
-        .view-display-id-home_gigs,
-        .view-id-list_home {
+        .view-list-gig-home,
+        .view-list-media-home {
           .views-row:nth-child(3) {
             display:none;
           }
@@ -437,7 +438,8 @@ body {
           width: 100%;
         }
       }
-      .view-list-home {
+      .view-list-gig-home,
+      .view-list-media-home {
         .heading {
           width: 100%;
         }
@@ -464,8 +466,8 @@ body {
   @media(max-width: 600px) {
     .main-container {
       .field--name-field-view-reference {
-        .view-display-id-home_gigs,
-        .view-id-list_home {
+        .view-list-gig-home,
+        .view-list-media-home {
           .views-row:nth-child(2) {
             display:none;
           }
@@ -499,7 +501,8 @@ body {
         }
       }
       .field--name-field-view-reference {
-        .view-list-home {
+        .view-list-gig-home,
+        .view-list-media-home {
           .view-content {
             .views-row {
               width: 80%;
