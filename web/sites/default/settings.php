@@ -170,9 +170,9 @@ $databases = [];
  * information on these defaults and the potential issues.
  *
  * More details can be found in the constructor methods for each driver:
- * - \Drupal\mysql\Driver\Database\mysql\Connection::__construct()
- * - \Drupal\pgsql\Driver\Database\pgsql\Connection::__construct()
- * - \Drupal\sqlite\Driver\Database\sqlite\Connection::__construct()
+ * - \Drupal\Core\Database\Driver\mysql\Connection::__construct()
+ * - \Drupal\Core\Database\Driver\pgsql\Connection::__construct()
+ * - \Drupal\Core\Database\Driver\sqlite\Connection::__construct()
  *
  * Sample Database configuration format for PostgreSQL (pgsql):
  * @code
@@ -249,7 +249,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'AsRMV1IDVUMmSqDHNeiS_xtWJhM97YUci7gdG6dgDvY0z1IHgVfB50KQl6osMO0KyFrC2uQ_2w';
+$settings['hash_salt'] = 'jgt07AM5-rqOjvfHhUQe6QLM6GrPwwnFemLHCSE_3vAOjhdvzx6wT3vi4sTp4rqewBf8j4wvnw';
 
 /**
  * Deployment identifier.
@@ -703,9 +703,16 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * @endcode
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
- *
- * @see https://www.drupal.org/docs/installing-drupal/trusted-host-settings
  */
+
+$settings['trusted_host_patterns'] = array(
+  '^differentwavelengths\.uk$',
+  '^differentwavelengths\.uk\.web$',
+  '^.+\.differentwavelengths\.uk$',
+  '^.+\.differentwavelengths\.uk\.web$',
+  '^www\.differentwavelengths\.uk$',
+  '^www\.differentwavelengths\.uk$\.web$',
+);
 
 /**
  * The default list of directories that will be ignored by Drupal's file API.
@@ -772,14 +779,23 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'diff_wave_2022',
-  'username' => 'neontank',
-  'password' => 'obliVion1!',
+  'database' => 'u684743281_different_wave',
+  'username' => 'u684743281_different_wave',
+  'password' => 'nemeSis11',
   'prefix' => '',
   'host' => 'localhost',
   'port' => '3306',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_GXrPBSYtXlpnUgJyEOiIpOhA5X2kSXPjgBoRaII-yzPZx9i9e213das1stoYEjcyVjS_q3OiKw/sync';
+$settings['config_sync_directory'] = 'sites/default/files/config_uQbFabco6eMiy7CyJPprpph5UUKTw4LoG-2uM40MCI1birxxVkjMw_bPbltp8-CtBJnKfdP7Kw/sync';
+
+if (isset($GLOBALS['request']) and '/web/index.php' === $GLOBALS['request']->server->get('SCRIPT_NAME')) {
+$GLOBALS['request']->server->set('SCRIPT_NAME', '/index.php');
+}
+
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}
