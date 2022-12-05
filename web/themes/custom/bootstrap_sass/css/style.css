@@ -7882,6 +7882,11 @@ body .page-header {
 .user-logged-in .region-header {
   margin: 150px 50px 0 50px;
 }
+@media (max-width: 489px) {
+  .user-logged-in .region-header {
+    margin: 150px 10px 0 10px;
+  }
+}
 .user-logged-in .region-header .page-header {
   display: block;
   color: white;

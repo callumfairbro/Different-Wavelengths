@@ -132,6 +132,9 @@ body {
   }
   .region-header {
     margin: 150px 50px 0 50px;
+    @media(max-width: $screen-mobile) {
+      margin: 150px 10px 0 10px;
+    }
     .page-header {
       display:block;
       color: white;
