@@ -7879,8 +7879,21 @@ body .page-header {
 .user-logged-in .tabs--primary {
   margin-top: 41px;
 }
-.user-logged-in .page-header {
+.user-logged-in .region-header {
+  margin: 150px 50px 0 50px;
+}
+.user-logged-in .region-header .page-header {
   display: block;
+  color: white;
+}
+.user-logged-in .region-header .tabs li a {
+  color: white;
+}
+.user-logged-in .region-header .tabs li a.is-active {
+  color: #555555;
+}
+.user-logged-in .region-header .tabs li a:hover {
+  color: #555555;
 }
 
 .page-node-type-landing-page .main-container {

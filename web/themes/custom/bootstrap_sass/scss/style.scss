@@ -130,8 +130,25 @@ body {
   .tabs--primary {
     margin-top: 41px;
   }
-  .page-header {
-    display:block;
+  .region-header {
+    margin: 150px 50px 0 50px;
+    .page-header {
+      display:block;
+      color: white;
+    }
+    .tabs {
+      li {
+        a {
+          color: white;
+          &.is-active {
+            color: #555555;
+          }
+          &:hover {
+            color: #555555;
+          }
+        }
+      }
+    }
   }
 }
 
