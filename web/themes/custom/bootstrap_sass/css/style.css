@@ -7964,6 +7964,28 @@ body .page-header {
   margin-bottom: 25px;
   color: white;
 }
+.page-node-type-landing-page .main-container .paragraph--type--banner {
+  display: none;
+  position: relative;
+  margin-bottom: 50px;
+}
+.page-node-type-landing-page .main-container .paragraph--type--banner .field--name-field-banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 40px;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: Geometric Slabserif;
+  text-transform: uppercase;
+  border-color: white;
+  border-style: solid;
+  border-width: 0.2em;
+  padding: 25px 50px;
+  z-index: 10;
+}
 .page-node-type-landing-page .main-container .field--name-field-view-reference {
   width: 80%;
   margin: 100px auto;
@@ -8231,9 +8253,14 @@ body .page-header {
   }
 }
 @media (max-width: 489px) {
-  .page-node-type-landing-page .main-container .paragraph--type--banner-video .field--name-field-banner-title {
+  .page-node-type-landing-page .main-container .paragraph--type--banner-video {
+    display: none;
+  }
+  .page-node-type-landing-page .main-container .paragraph--type--banner {
+    display: block;
+  }
+  .page-node-type-landing-page .main-container .paragraph--type--banner .field--name-field-banner-title {
     padding: 5px 10px;
-    border-style: none;
   }
   .page-node-type-landing-page .main-container .paragraph--type--text {
     margin: 75px auto;
@@ -8666,11 +8693,20 @@ body .page-header {
   .page-node-type-contact .main-container .region-content .banner-wrapper .paragraph--type--banner .field--name-field-banner-title {
     font-size: 32px;
   }
+  .page-node-type-contact .main-container .region-content .content-wrapper .socials .social-title {
+    font-size: 32px;
+  }
+  .page-node-type-contact .main-container .region-content .content-wrapper .socials .social-content {
+    font-size: 18px;
+  }
 }
 @media (max-width: 768px) and (max-width: 489px) {
   .page-node-type-contact .main-container .region-content .banner-wrapper .paragraph--type--banner .field--name-field-banner-title {
     white-space: nowrap;
     padding: 5px 10px;
+  }
+  .page-node-type-contact .main-container .region-content .content-wrapper .socials .social-content {
+    font-size: 16px;
   }
 }
 

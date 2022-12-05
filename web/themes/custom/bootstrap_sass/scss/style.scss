@@ -223,6 +223,31 @@ body {
       }
     }
 
+    .paragraph--type--banner {
+      
+      display: none;
+      position: relative;
+      margin-bottom: 50px;
+
+      .field--name-field-banner-title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin-top: 40px;
+          text-align: center;
+          font-size: 3em;
+          font-weight: bold;
+          font-family: Geometric Slabserif; 
+          text-transform: uppercase; 
+          border-color: white;
+          border-style: solid;
+          border-width: 0.2em;
+          padding: 25px 50px;
+          z-index: 10;
+      }
+    }
+
     .field--name-field-view-reference {
       width: 80%;
       margin: 100px auto;
@@ -476,9 +501,12 @@ body {
   @media(max-width: $screen-mobile) {
     .main-container {
       .paragraph--type--banner-video {
+        display: none;
+      }
+      .paragraph--type--banner {
+        display: block;
         .field--name-field-banner-title {
           padding: 5px 10px;
-          border-style: none;
         }
       }
       .paragraph--type--text {
@@ -1019,6 +1047,16 @@ body {
               }
             }
           }
+          .content-wrapper {
+            .socials {
+              .social-title {
+                font-size: 32px;
+              }
+              .social-content {
+                font-size: 18px;
+              }
+            }
+          }
         }
       }
   
@@ -1030,6 +1068,13 @@ body {
               .field--name-field-banner-title {
                 white-space: nowrap;
                 padding: 5px 10px;
+              }
+            }
+          }
+          .content-wrapper {
+            .socials {
+              .social-content {
+                font-size: 16px;
               }
             }
           }
