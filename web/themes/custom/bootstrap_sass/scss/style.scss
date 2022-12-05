@@ -253,14 +253,14 @@ body {
           transform: translate(-50%, -50%);
           margin-top: 40px;
           text-align: center;
-          font-size: 3em;
+          font-size: 32px;
           font-weight: bold;
           font-family: Geometric Slabserif; 
           text-transform: uppercase; 
           border-color: white;
           border-style: solid;
           border-width: 0.2em;
-          padding: 25px 50px;
+          padding: 5px 10px;
           z-index: 10;
       }
     }
@@ -522,9 +522,6 @@ body {
       }
       .paragraph--type--banner {
         display: block;
-        .field--name-field-banner-title {
-          padding: 5px 10px;
-        }
       }
       .paragraph--type--text {
         margin: 75px auto;
