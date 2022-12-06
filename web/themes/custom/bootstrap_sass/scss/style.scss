@@ -29,6 +29,10 @@ $screen-desktop: 1200px;
 
 // Entire site
 
+.field--name-field-promoted { 
+  display: none;
+}
+
 body {
   font-family: Lato, sans-serif, Verdana, Geneva, Tahoma;
   color: white;
@@ -1320,119 +1324,103 @@ body {
 @media(max-width: $screen-laptop) {
   #navbar {
     overflow: visible;
-    z-index: 101;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    box-shadow: none;
+    background: none;
+    padding: 0;
     .line-top,
     .line-bottom {
       display: none;
     }
     .navbar-header {
-      display: flex;
-      justify-content: space-between;
       .region-navigation {
         flex: 100%;
+        background: $almost-black;
+        height: unset;
+        .logo {
+          margin: 10px 0;
+        }
       }
     }
     .navbar-collapse {
-      display: none !important;
-      position: absolute;
-      top: 85px;
-      right: 50%;
-      transform: translate(50%, -100px);
+      border: none;
+      height: 100vh;
+      overflow: visible;
       &.collapse {
-        &.in {
-          display: block !important;
-        }
+        display: flex;
+      }
       }
       #block-bootstrap-sass-main-menu {
         .navbar-nav {
-          flex-direction:column;
-          justify-content:center;
+          flex-flow: column;
+          align-items: center;
+          position: fixed;
           height: 100vh;
-          position:relative;
-          z-index:5;
-          visibility:hidden;
-          @for $i from 1 through 4 {
-            li:nth-child(#{$i}){
-              transform:translateY(-40px * $i);
+          top: 50%;
+          right: -60vw;
+          z-index: 1500;
+          opacity: 1;
+          width: 0%;
+          transform: translateY(-25%);
+          transition: right 0.8s;
+          li {
+            a {
+              color: white;
             }
           }
-          li {
-            transition: all 1s cubic-bezier(0.000, 0.995, 0.990, 1.000);
-            opacity:0;
-            a {
-              color:white;
-              display:block;
-              text-align:center;
-              text-transform:uppercase;
-              letter-spacing:5px;
-              font-size:1.25rem;
-              text-decoration:none;
-              padding:1rem;
-              &:hover,
-              &:focus {
-                outline:0;
-              }
-            }
+        }
+        &.open {
+          .navbar-nav {
+            right: 0;
+            transition: right 0.8s;
           }
         }
       }
-      :target,
-      .open {
-          .navbar-nav {
-            visibility:visible !important;
-          }
-          li {
-            opacity:1 !important;
-            transform:translateY(0) !important;
-          }
-        }
     }
     .navbar-toggle {
       display: block;
       border-style: none;
       padding: 0;
-      background-color: transparent;
+      position: absolute;
+      top: 25px;
+      right: 0;
       .icon-bar {
         background: white;
       }
     }    
   }
   .splash {
-    position:absolute;
-    top:40px;
-    right:40px;
-    width: 1px;
-    height: 1px;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    top: -1vh; 
+    right: -1vw; 
+    background-color: $almost-black;
+    z-index: 50;
+    // transition: transform 0.8s- cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s;
     
-    &::after {
-      content:"";
-      display:block;
-      position:absolute;
-      border-radius:50%;
-      background-color:$almost-black;
-      width:1000vmax;
-      height:1000vmax;
-      top:-500vmax;
-      left:-500vmax;
-      transform: scale(0);
-      transform-origin:50% 50%;
-      transition: transform 1s cubic-bezier(0.755, 0.050, 0.855, 0.060);
-      will-change:transform;
-      z-index:100;
+    &.active-splash {
+      transform: scale(80);
     }
-    &.active-splash::after {
-      transform:scale(1);
-    }
+
   } 
-}
 
 @media(max-width: 460px) {
   #navbar {
     .navbar-brand {
       display: none;
     }
-    .logo {
-      margin-left: calc(50vw - 60.65px);
+    .navbar-header {
+      .region-navigation {
+        justify-content: center;
+      }
+      .logo {
+        margin: 10px auto;
+      }
     }
   }
 }

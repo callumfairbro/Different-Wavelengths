@@ -7793,6 +7793,10 @@ th {
   color: inherit;
 }
 
+.field--name-field-promoted {
+  display: none;
+}
+
 body {
   font-family: Lato, sans-serif, Verdana, Geneva, Tahoma;
   color: white;
@@ -8923,117 +8927,89 @@ body .page-header {
 @media (max-width: 1024px) {
   #navbar {
     overflow: visible;
-    z-index: 101;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    box-shadow: none;
+    background: none;
+    padding: 0;
   }
   #navbar .line-top,
 #navbar .line-bottom {
     display: none;
   }
-  #navbar .navbar-header {
-    display: flex;
-    justify-content: space-between;
-  }
   #navbar .navbar-header .region-navigation {
     flex: 100%;
+    background: #17141d;
+    height: unset;
+  }
+  #navbar .navbar-header .region-navigation .logo {
+    margin: 10px 0;
   }
   #navbar .navbar-collapse {
-    display: none !important;
-    position: absolute;
-    top: 85px;
-    right: 50%;
-    transform: translate(50%, -100px);
-  }
-  #navbar .navbar-collapse.collapse.in {
-    display: block !important;
-  }
-  #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav {
-    flex-direction: column;
-    justify-content: center;
+    border: none;
     height: 100vh;
-    position: relative;
-    z-index: 5;
-    visibility: hidden;
+    overflow: visible;
   }
-  #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav li:nth-child(1) {
-    transform: translateY(-40px);
+  #navbar .navbar-collapse.collapse {
+    display: flex;
   }
-  #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav li:nth-child(2) {
-    transform: translateY(-80px);
+  #navbar #block-bootstrap-sass-main-menu .navbar-nav {
+    flex-flow: column;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    top: 50%;
+    right: -60vw;
+    z-index: 1500;
+    opacity: 1;
+    width: 0%;
+    transform: translateY(-25%);
+    transition: right 0.8s;
   }
-  #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav li:nth-child(3) {
-    transform: translateY(-120px);
-  }
-  #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav li:nth-child(4) {
-    transform: translateY(-160px);
-  }
-  #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav li {
-    transition: all 1s cubic-bezier(0, 0.995, 0.99, 1);
-    opacity: 0;
-  }
-  #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav li a {
+  #navbar #block-bootstrap-sass-main-menu .navbar-nav li a {
     color: white;
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.25rem;
-    text-decoration: none;
-    padding: 1rem;
   }
-  #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav li a:hover, #navbar .navbar-collapse #block-bootstrap-sass-main-menu .navbar-nav li a:focus {
-    outline: 0;
+  #navbar #block-bootstrap-sass-main-menu.open .navbar-nav {
+    right: 0;
+    transition: right 0.8s;
   }
-  #navbar .navbar-collapse :target .navbar-nav,
-#navbar .navbar-collapse .open .navbar-nav {
-    visibility: visible !important;
-  }
-  #navbar .navbar-collapse :target li,
-#navbar .navbar-collapse .open li {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-  #navbar .navbar-toggle {
+  .navbar-toggle {
     display: block;
     border-style: none;
     padding: 0;
-    background-color: transparent;
+    position: absolute;
+    top: 25px;
+    right: 0;
   }
-  #navbar .navbar-toggle .icon-bar {
+  .navbar-toggle .icon-bar {
     background: white;
   }
-  .splash {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    width: 1px;
-    height: 1px;
-  }
-  .splash::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background-color: #17141d;
-    width: 1000vmax;
-    height: 1000vmax;
-    top: -500vmax;
-    left: -500vmax;
-    transform: scale(0);
-    transform-origin: 50% 50%;
-    transition: transform 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    will-change: transform;
-    z-index: 100;
-  }
-  .splash.active-splash::after {
-    transform: scale(1);
-  }
 }
+.splash {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: -1vh;
+  right: -1vw;
+  background-color: #17141d;
+  z-index: 50;
+  transition: transform 0.8s;
+}
+.splash.active-splash {
+  transform: scale(80);
+}
+
 @media (max-width: 460px) {
   #navbar .navbar-brand {
     display: none;
   }
-  #navbar .logo {
-    margin-left: calc(50vw - 60.65px);
+  #navbar .navbar-header .region-navigation {
+    justify-content: center;
+  }
+  #navbar .navbar-header .logo {
+    margin: 10px auto;
   }
 }
 .bg-primary {
