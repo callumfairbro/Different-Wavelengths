@@ -8993,12 +8993,13 @@ body .page-header {
   position: fixed;
   top: -1vh;
   right: -1vw;
-  background-color: #17141d;
+  background-color: none;
   z-index: 50;
   transition: transform 0.8s;
 }
 .splash.active-splash {
   transform: scale(80);
+  background-color: #17141d;
 }
 
 @media (max-width: 460px) {

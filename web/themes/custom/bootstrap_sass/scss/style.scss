@@ -1398,13 +1398,13 @@ body {
     position: fixed;
     top: -1vh; 
     right: -1vw; 
-    background-color: $almost-black;
+    background-color: none;
     z-index: 50;
-    // transition: transform 0.8s- cubic-bezier(0.86, 0, 0.07, 1);
     transition: transform 0.8s;
     
     &.active-splash {
       transform: scale(80);
+      background-color: $almost-black;
     }
 
   } 
