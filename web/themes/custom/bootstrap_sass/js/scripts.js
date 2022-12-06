@@ -32,7 +32,7 @@
 
           function menuScroll() {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
+            if (prevScrollpos > currentScrollPos - 1) {
               if($('.user-logged-in').length > 0) {
                 $('#navbar').css('top','79px');
               } else {
