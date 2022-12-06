@@ -1383,11 +1383,16 @@ body {
       display: block;
       border-style: none;
       padding: 0;
-      position: absolute;
-      top: 25px;
+      background: none !important;
+      position: absolute; 
+      top: 25%;
       right: 0;
-      .icon-bar {
-        background: white;
+      &:hover {
+        background-color: none !important;
+        .icon-bar {
+          background: white !important;
+          transition: background-color 1s;
+        }
       }
     }    
   }

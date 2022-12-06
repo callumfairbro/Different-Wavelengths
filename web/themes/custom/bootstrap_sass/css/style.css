@@ -8978,12 +8978,17 @@ body .page-header {
     display: block;
     border-style: none;
     padding: 0;
+    background: none !important;
     position: absolute;
-    top: 25px;
+    top: 25%;
     right: 0;
   }
-  .navbar-toggle .icon-bar {
-    background: white;
+  .navbar-toggle:hover {
+    background-color: none !important;
+  }
+  .navbar-toggle:hover .icon-bar {
+    background: white !important;
+    transition: background-color 1s;
   }
 }
 .splash {
