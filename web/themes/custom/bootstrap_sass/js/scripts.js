@@ -29,17 +29,19 @@
 
           // Variable for menu scroll method
           var prevScrollpos = window.pageYOffset;
-
           function menuScroll() {
+            if(prevScrollpos > 5) {}
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos - 1) {
-              if($('.user-logged-in').length > 0) {
-                $('#navbar').css('top','79px');
+            if ((screen.width >= 1025) && (currentScrollPos > 50)) {
+              if (prevScrollpos > currentScrollPos) {
+                if($('.user-logged-in').length > 0) {
+                  $('#navbar').css('top','79px');
+                } else {
+                  $('#navbar').css('top', '0');
+                }
               } else {
-                $('#navbar').css('top', '0');
+                $('#navbar').css('top', '-85px');
               }
-            } else {
-              $('#navbar').css('top', '-85px');
             }
             prevScrollpos = currentScrollPos;
           }
