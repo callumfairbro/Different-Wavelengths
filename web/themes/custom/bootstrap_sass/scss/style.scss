@@ -128,6 +128,7 @@ body {
     display:none;
   }
 
+  
 }
 
 .user-logged-in {
@@ -865,6 +866,144 @@ body {
     .modal-wrapper {
       .close {
         top: 85px !important;
+      }
+    }
+  }
+}
+
+// Band Bio page
+
+.page-node-type-band-page {
+  .main-container {
+    width: 100%;
+    .paragraph--type--banner {
+
+      position: relative;
+      margin-bottom: 50px;
+
+      .field--name-field-banner-title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin-top: 40px;
+          text-align: center;
+          font-size: 3em;
+          font-weight: bold;
+          font-family: Geometric Slabserif; 
+          text-transform: uppercase; 
+          border-color: white;
+          border-style: solid;
+          border-width: 0.2em;
+          padding: 25px 50px;
+          z-index: 10;
+      }
+    }
+
+    .paragraph--type--band-member {
+      display: flex;
+      justify-content: center;
+      .wrapper {
+        display: flex;
+        width: 90%;
+        margin-bottom: 50px;
+        @media(max-width: $screen-tablet) {
+          flex-flow: column;
+        }
+        &.right {
+          flex-direction: row-reverse;
+          @media(max-width: $screen-tablet) {
+            flex-direction: unset;
+          }
+        }
+        .left {
+          width: 33%;
+          @media(max-width: $screen-tablet) {
+            width: 100%;
+          }
+          div {
+            height: 100%;
+            img {
+              aspect-ratio: 1/1;
+              object-fit: cover;
+              object-position: top;
+              height: 100%;
+            }
+          }
+        }
+        .right {
+          display: flex;
+          flex-flow: column;
+          gap: 25px;
+          width: 67%;
+          background-color: $light-grey;
+          color: $almost-black;
+          padding: 50px;
+          font-size: 18px;
+          @media(max-width: $screen-tablet) {
+            width: 100%;
+          }
+          .name-instrument {
+            display: flex;
+            gap: 12.5px;
+            .field--name-field-name {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+  
+
+    }
+
+    @media(max-width: $screen-desktop) {
+      .main-container {
+        .region-content {
+          .content-wrapper {
+            gap: 50px;
+            margin: -100px 50px 100px 50px;
+          }
+        }
+      }
+    }
+  
+      @media(max-width: 900px) {
+        .main-container {
+          .region-content {
+            .content-wrapper {
+              flex-wrap: wrap;
+              gap: 25px;
+              margin: -75px 25px 100px 25px;
+            }
+          }
+        }
+      }
+  
+      @media(max-width: $screen-tablet) {
+        .main-container {
+          background-position: center;
+          .region-content {
+            .banner-wrapper {
+              .paragraph--type--banner {
+                .field--name-field-banner-title {
+                  font-size: 32px;
+                }
+              }
+            }
+          }
+        }
+    
+      @media(max-width: $screen-mobile) {
+        .main-container {
+          .region-content {
+            .paragraph--type--banner {
+              .field--name-field-banner-title {
+                white-space: nowrap;
+                padding: 5px 10px;
+              }
+            }
+          }      
+        }
       }
     }
   }

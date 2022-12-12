@@ -1,8 +1,17 @@
 <?php
 
 /**
- * @file
- * Bootstrap sub-theme.
- *
- * Place your custom PHP code in this file.
- */
+ * Implements hook_preprocess_paragraph().
+*/
+function bootstrap_sass_preprocess_paragraph(&$variables) {
+    $paragraph = $variables['paragraph'];
+    if ($paragraph->hasField('field_picture_left')) {
+        $value = $paragraph->get('field_picture_left')->getValue()[0];
+        $value = reset($value);
+        if($value == 1) {
+            $variables['left'] = true;
+        } else {
+            $variables['left'] = false;
+        }
+    }
+}

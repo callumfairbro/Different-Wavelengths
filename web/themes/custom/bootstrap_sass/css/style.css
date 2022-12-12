@@ -8543,6 +8543,121 @@ body .page-header {
   top: 85px !important;
 }
 
+.page-node-type-band-page .main-container {
+  width: 100%;
+}
+.page-node-type-band-page .main-container .paragraph--type--banner {
+  position: relative;
+  margin-bottom: 50px;
+}
+.page-node-type-band-page .main-container .paragraph--type--banner .field--name-field-banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 40px;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: Geometric Slabserif;
+  text-transform: uppercase;
+  border-color: white;
+  border-style: solid;
+  border-width: 0.2em;
+  padding: 25px 50px;
+  z-index: 10;
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member {
+  display: flex;
+  justify-content: center;
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member .wrapper {
+  display: flex;
+  width: 90%;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  .page-node-type-band-page .main-container .paragraph--type--band-member .wrapper {
+    flex-flow: column;
+  }
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member .wrapper.right {
+  flex-direction: row-reverse;
+}
+@media (max-width: 768px) {
+  .page-node-type-band-page .main-container .paragraph--type--band-member .wrapper.right {
+    flex-direction: unset;
+  }
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member .wrapper .left {
+  width: 33%;
+}
+@media (max-width: 768px) {
+  .page-node-type-band-page .main-container .paragraph--type--band-member .wrapper .left {
+    width: 100%;
+  }
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member .wrapper .left div {
+  height: 100%;
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member .wrapper .left div img {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  height: 100%;
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member .wrapper .right {
+  display: flex;
+  flex-flow: column;
+  gap: 25px;
+  width: 67%;
+  background-color: #F3F3F3;
+  color: #17141d;
+  padding: 50px;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .page-node-type-band-page .main-container .paragraph--type--band-member .wrapper .right {
+    width: 100%;
+  }
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member .wrapper .right .name-instrument {
+  display: flex;
+  gap: 12.5px;
+}
+.page-node-type-band-page .main-container .paragraph--type--band-member .wrapper .right .name-instrument .field--name-field-name {
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .page-node-type-band-page .main-container .main-container .region-content .content-wrapper {
+    gap: 50px;
+    margin: -100px 50px 100px 50px;
+  }
+}
+@media (max-width: 900px) {
+  .page-node-type-band-page .main-container .main-container .region-content .content-wrapper {
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: -75px 25px 100px 25px;
+  }
+}
+@media (max-width: 768px) {
+  .page-node-type-band-page .main-container .main-container {
+    background-position: center;
+  }
+  .page-node-type-band-page .main-container .main-container .region-content .banner-wrapper .paragraph--type--banner .field--name-field-banner-title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) and (max-width: 489px) {
+  .page-node-type-band-page .main-container .main-container .region-content .paragraph--type--banner .field--name-field-banner-title {
+    white-space: nowrap;
+    padding: 5px 10px;
+  }
+}
+
 .page-node-type-contact .main-container {
   width: 100%;
 }
