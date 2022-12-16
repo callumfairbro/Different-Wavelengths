@@ -14,4 +14,34 @@ function bootstrap_sass_preprocess_paragraph(&$variables) {
             $variables['left'] = false;
         }
     }
+
+    if ($paragraph->hasField('field_picture_left')) {
+        $value = $paragraph->get('field_picture_left')->getValue()[0];
+        $value = reset($value);
+        if($value == 1) {
+            $variables['left'] = true;
+        } else {
+            $variables['left'] = false;
+        }
+    }
 }
+
+/**
+ * Implements hook_preprocess_field().
+*/
+// function bootstrap_sass_preprocess_field(&$variables, $hook) {
+//     $element = $variables['element'];
+//     if (isset($element['#field_name'])) {
+//       if ($element['#field_name'] == 'field_video') {
+//         // dump($element["#items"]->first());
+//         // exit;
+//         $referenceItem = $element["#items"]->first();
+//         $entityReference = $referenceItem->get('entity');
+//         $entityAdapter = $entityReference->getTarget();
+//         $referencedEntity = $entityAdapter->getValue();
+//         // dump($referencedEntity->getFileUri());
+//         // exit;
+//         // $variables['classes_array'][] = 'aClassName';
+//       }
+//     }
+//   }

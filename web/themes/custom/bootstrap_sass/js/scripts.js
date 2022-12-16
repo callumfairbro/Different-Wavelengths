@@ -48,26 +48,31 @@
 
           function intialTopLine() {
             const lis = document.querySelectorAll(".menu--main li");
+            const menuItems = lis.length;
             var activeLis = document.querySelectorAll('.menu--main .active');
             if(activeLis.length == 0) {
               activeLis = document.querySelectorAll('.menu--main .first');
               activeLis[0].classList.add("active");
             }
+
+            
           
-            switch(activeLis[0]) {
-              case lis[0]:
-                document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -35;";
-                break;
-              case lis[1]:
-                document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -285;";
-                break;
-              case lis[2]:
-                document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -535;";
-                break;
-              case lis[3]:
-                document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -785;";
-                break;
-            }
+            // switch(activeLis[0]) {
+            //   case lis[0]:
+            //     document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -35;";
+            //     break;
+            //   case lis[1]:
+            //     document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -285;";
+            //     break;
+            //   case lis[2]:
+            //     document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -535;";
+            //     break;
+            //   case lis[3]:
+            //     document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -785;";
+            //     break;
+            // }
+            const dashOffset = -35 * menuItems;
+            document.querySelector('.line-dash').style = ("stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: " + dashOffset + ";");
             document.querySelector('.line-dash').style.display = "unset";
           }
 
@@ -215,7 +220,6 @@
             let isMenuOpen = false;
 
             var listItems = document.querySelectorAll('.menu--main li');
-            console.log(listItems[0]);
             for (let i = 0; i < listItems.length; ++i) {
               listItems[i].classList.add(i);
             }
@@ -248,7 +252,7 @@
                 }
               }
             });
-          }        
+          }
 
           $(window).on('load', function() {
             addJsScroll();
