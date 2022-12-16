@@ -55,29 +55,33 @@
               activeLis[0].classList.add("active");
             }
 
-            
-          
-            // switch(activeLis[0]) {
-            //   case lis[0]:
-            //     document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -35;";
-            //     break;
-            //   case lis[1]:
-            //     document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -285;";
-            //     break;
-            //   case lis[2]:
-            //     document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -535;";
-            //     break;
-            //   case lis[3]:
-            //     document.querySelector('.line-dash').style = "stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: -785;";
-            //     break;
-            // }
-            const dashOffset = -35 * menuItems;
-            document.querySelector('.line-dash').style = ("stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 180, 1200; stroke-dashoffset: " + dashOffset + ";");
+            const lineTopWidth = menuItems * 187.5;
+            var lineTop = document.querySelector('#block-bootstrap-sass-main-menu .line-top');
+            lineTop.setAttribute("width", lineTopWidth); 
+
+            lineDash = document.querySelector('#block-bootstrap-sass-main-menu .line-top .line-dash');
+            lineDash.setAttribute("x2", lineTopWidth);
+            lineDash.style.strokeDasharray = "141px," + lineTopWidth + "px";
+            console.log(lineDash);
+
+            for(var i = 0; i < menuItems; i++ ){
+              if(activeLis[0] == lis[i]) {
+                activeItem = i;
+                break;
+              } 
+            }
+
+            const baseItemWidth = lineTopWidth / menuItems;
+            const dashOffset = -23 - (activeItem * baseItemWidth);
+            document.querySelector('.line-dash').style = ("stroke: orange; stroke-width: 2; stroke-linecap: round; stroke-dasharray: 141," + lineTopWidth + "; stroke-dashoffset: " + dashOffset + ";");
             document.querySelector('.line-dash').style.display = "unset";
           }
 
           function menuAnimation() {
             const lis = document.querySelectorAll(".menu--main li");
+            const menuItems = lis.length;
+            const lineTopWidth = menuItems * 187.5;
+            const baseItemWidth = lineTopWidth / menuItems;
             const lbs = document.querySelectorAll(".lb");
             const ul = document.querySelector("#block-bootstrap-sass-main-menu ul");
             const lineDash = document.querySelector(".line-dash");
@@ -100,16 +104,16 @@
             var activeLbs = undefined;
 
             //Defining the origin
-            for(let i = 0; i < 4; ++i) {
+            for(let i = 0; i < menuItems; ++i) {
               if(lis[i] === activeLis[0]) {
-                dashOrigin = -250 * i - 35;
-                selectedLi = -250 * i - 35;
+                dashOrigin = -baseItemWidth * i - 23;
+                selectedLi = -baseItemWidth * i - 23;
                 break;
               }
             }
 
             // Making an item active
-            for(let i = 0; i < 4; ++i) {
+            for(let i = 0; i < menuItems; ++i) {
               if(lis[i] === activeLis[0]) {
                 lis[i].classList.add('active');
                 activeLbs = lbs[i];
@@ -125,7 +129,7 @@
             });
 
             // Class for current page
-            for(let i = 0; i < 4; ++i) {
+            for(let i = 0; i < menuItems; ++i) {
               if(lis[i] === activeLis[0]) {
                 lis[i].classList.add("active");
               }
@@ -152,14 +156,15 @@
               false
             );
 
-            for (let i = 0; i < 4; ++i) {
+            for (let i = 0; i < menuItems; ++i) {
               lis[i].addEventListener("mouseover", function() {
-                distance = Math.abs(-250 * i - 35 - dashOrigin);
+                distance = Math.abs(-baseItemWidth * i - 23 - dashOrigin);
                 time = distance / speed;
-                dashOrigin = -250 * i - 35;
+                dashOrigin = -baseItemWidth * i - 23;
+
                 if (time) {
                   TweenLite.to(lineDash, time, {
-                    strokeDashoffset: -250 * i - 35,
+                    strokeDashoffset: -baseItemWidth * i - 23,
                     ease: Bounce.easeOut
                   });
                 }

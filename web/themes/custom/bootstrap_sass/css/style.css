@@ -9027,7 +9027,7 @@ body .page-header {
   margin-right: 2rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   #navbar {
     overflow: visible;
     z-index: 100;
@@ -9118,7 +9118,7 @@ body .page-header {
     justify-content: center;
   }
   #navbar .navbar-header .logo {
-    margin: 10px auto;
+    margin: 10px;
   }
 }
 .bg-primary {

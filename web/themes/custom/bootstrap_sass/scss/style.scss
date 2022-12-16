@@ -1483,7 +1483,7 @@ body {
 
 }
 
-@media(max-width: $screen-laptop) {
+@media(max-width: $screen-desktop) {
   #navbar {
     overflow: visible;
     z-index: 100;
@@ -1586,7 +1586,7 @@ body {
         justify-content: center;
       }
       .logo {
-        margin: 10px auto;
+        margin: 10px;
       }
     }
   }
