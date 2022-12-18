@@ -65,7 +65,6 @@
             lineDash = document.querySelector('#block-bootstrap-sass-main-menu .line-top .line-dash');
             lineDash.setAttribute("x2", lineTopWidth);
             lineDash.style.strokeDasharray = "141px," + lineTopWidth + "px";
-            console.log(lineDash);
 
             for(var i = 0; i < menuItems; i++ ){
               if(activeLis[0] == lis[i]) {
@@ -272,7 +271,6 @@
             intialTopLine();
             menuAnimation();
             imageModal();
-            mobileMenu();
           })
           
           $(window).on('scroll', function() {
@@ -280,7 +278,7 @@
           })
 
           $(document).ready(function() {
-
+            mobileMenu();
           })
 
         }
