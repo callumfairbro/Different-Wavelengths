@@ -230,19 +230,13 @@
             const menuToggle = document.querySelector('.navbar-toggle');
             let isMenuOpen = false;
 
-            var listItems = document.querySelectorAll('.menu--main li');
-            for (let i = 0; i < listItems.length; ++i) {
-              listItems[i].classList.add(i);
-            }
-
-            menuToggle.addEventListener('click', e => {
-              // e.preventDefault();
+            menuToggle.onclick = function() {
               isMenuOpen = !isMenuOpen;
               menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
               menu.hidden = !isMenuOpen;
               nav.classList.toggle('open');
               splash.classList.toggle('active-splash');
-            });
+            };
 
 
             nav.addEventListener('keydown', e => {
