@@ -9171,13 +9171,6 @@ body .page-header {
   .navbar-toggle .icon-bar {
     background-color: orange !important;
   }
-  .navbar-toggle:hover {
-    background-color: none !important;
-  }
-  .navbar-toggle:hover .icon-bar {
-    background-color: white !important;
-    transition: background-color 1s;
-  }
 }
 .splash {
   height: 4rem;

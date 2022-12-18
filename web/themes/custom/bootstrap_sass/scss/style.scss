@@ -1389,13 +1389,13 @@ body {
       .icon-bar {
         background-color: orange !important;
       }
-      &:hover {
-        background-color: none !important;
-        .icon-bar {
-          background-color: white !important;
-          transition: background-color 1s;
-        }
-      }
+      // &:hover {
+      //   background-color: none !important;
+      //   .icon-bar {
+      //     background-color: white !important;
+      //     transition: background-color 1s;
+      //   }
+      // }
     }    
   }
   .splash {
