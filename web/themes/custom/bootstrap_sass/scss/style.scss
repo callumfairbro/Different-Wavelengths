@@ -207,22 +207,10 @@ body {
         width: 100%;
         video {
           width: 100%;
-          @media(max-width: $screen-tablet) {
-            display: none;
-            // width: 100vw;
-            // aspect-ratio: 1/1;
-            // object-fit: cover;
-          }
         }
       }
       .field--name-field-banner-image {
-        display: none;
-        &.mobile {
-          display: block !important;
-        }
-        @media(max-width:$screen-tablet) {
-          display: block;
-        }
+        display: block;
       }
     } 
 
