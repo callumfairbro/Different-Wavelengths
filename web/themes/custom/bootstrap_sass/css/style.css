@@ -7800,7 +7800,7 @@ th {
 body {
   font-family: Lato, sans-serif, Verdana, Geneva, Tahoma;
   color: white;
-  background-color: #2b3a52;
+  background-color: #17141d;
   opacity: 1;
   max-width: 100%;
   margin-top: 0;
@@ -7813,7 +7813,7 @@ body .main-container {
 }
 body .footer {
   width: 100%;
-  background: #17141d;
+  background: #2b3a52;
   color: #F3F3F3;
   border: none;
   margin-top: 0;
@@ -7957,10 +7957,7 @@ body .page-header {
 }
 @media (max-width: 768px) {
   .page-node-type-landing-page .main-container .paragraph--type--banner-video div video {
-    width: 100vw;
-    aspect-ratio: 1/1;
-    -o-object-fit: cover;
-       object-fit: cover;
+    display: none;
   }
 }
 .page-node-type-landing-page .main-container .paragraph--type--text {
@@ -8101,7 +8098,7 @@ body .page-header {
 }
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row {
   background: #F3F3F3;
-  color: #17141d;
+  color: #2b3a52;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -8110,7 +8107,7 @@ body .page-header {
 }
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row .views-field a {
   height: 100%;
-  color: #17141d;
+  color: #2b3a52;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -8352,7 +8349,7 @@ body .page-header {
   display: flex;
   flex-flow: column nowrap;
   gap: 12.5px;
-  color: #17141d;
+  color: #2b3a52;
   padding: 25px;
 }
 .page-node-type-gig-page .view-list-upcoming-gigs .view-content .views-row .content .text .field--name-field-location {
@@ -8472,6 +8469,12 @@ body .page-header {
   flex-wrap: wrap;
   gap: 20px;
   margin: 25px 50px;
+}
+@media (max-width: 768px) {
+  .page-node-type-photos-page .main-container .view-list-gallery .view-content,
+.page-node-type-photos-page .main-container .view-list-media-gallery .view-content {
+    margin: 25px 35px;
+  }
 }
 .page-node-type-photos-page .main-container .view-list-gallery .view-content:after,
 .page-node-type-photos-page .main-container .view-list-media-gallery .view-content:after {
@@ -8659,7 +8662,7 @@ body .page-header {
   gap: 25px;
   width: 67%;
   background-color: #F3F3F3;
-  color: #17141d;
+  color: #2b3a52;
   padding: 50px;
   font-size: 18px;
   justify-content: center;
@@ -8786,8 +8789,8 @@ body .page-header {
   text-align: center;
   line-height: 50px;
   font-size: 15px;
-  background-color: #17141d;
-  border-color: #2b3a52;
+  background-color: #2b3a52;
+  border-color: #17141d;
   color: #FFF;
   transition: all 0.3s;
   position: relative;
@@ -8929,8 +8932,8 @@ body .page-header {
   text-align: center;
   line-height: 50px;
   font-size: 15px;
-  background-color: #17141d;
-  border-color: #2b3a52;
+  background-color: #2b3a52;
+  border-color: #17141d;
   color: #FFF;
   transition: all 0.3s;
   position: relative;
@@ -8990,11 +8993,10 @@ body .page-header {
   text-transform: uppercase;
   font-weight: 600;
   transition: top 0.3s;
-  background: #17141d;
+  background: #2b3a52;
   opacity: 0.9;
   border-style: none;
   border-radius: 0;
-  box-shadow: #333 1px 3px 4px;
 }
 #navbar .navbar-header {
   margin: auto 0;
@@ -9015,6 +9017,7 @@ body .page-header {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  letter-spacing: 3px;
 }
 #navbar .navbar-collapse #block-bootstrap-sass-main-menu {
   display: flex;
@@ -9079,6 +9082,7 @@ body .page-header {
     box-shadow: none;
     background: none;
     padding: 0;
+    height: 70px;
   }
   #navbar .line-top,
 #navbar .line-bottom {
@@ -9088,9 +9092,13 @@ body .page-header {
     display: flex;
     align-items: center;
   }
+  #navbar .navbar-header .navbar-brand {
+    padding-right: 59px;
+    letter-spacing: 3px;
+  }
   #navbar .navbar-header .region-navigation {
     flex: 100%;
-    background: #17141d;
+    background: #2b3a52;
     height: unset;
   }
   #navbar .navbar-header .region-navigation .logo {
@@ -9157,7 +9165,7 @@ body .page-header {
 }
 .splash.active-splash {
   transform: scale(80);
-  background-color: #17141d;
+  background-color: #2b3a52;
 }
 
 @media (max-width: 460px) {
