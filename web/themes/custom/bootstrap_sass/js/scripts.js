@@ -228,12 +228,13 @@
             const splash = document.querySelector('.splash');
             const menu = document.querySelector('.menu--main');
             const menuToggle = document.querySelector('.navbar-toggle');
-            let isMenuOpen = false;
+            const navBarCollapse = document.querySelector('#navbar-collapse');
 
             menuToggle.onclick = function() {
-              isMenuOpen = !isMenuOpen;
-              menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
-              menu.hidden = !isMenuOpen;
+              var collapsed = navBarCollapse.classList.contains('closed');
+              menuToggle.setAttribute('aria-expanded', String(collapsed));
+              menu.hidden = !collapsed;
+              navBarCollapse.classList.toggle('closed');
               nav.classList.toggle('open');
               splash.classList.toggle('active-splash');
             };
