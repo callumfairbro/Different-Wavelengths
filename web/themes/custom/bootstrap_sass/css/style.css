@@ -7813,9 +7813,10 @@ body .main-container {
 }
 body .footer {
   width: 100%;
-  background: #2b3a52;
+  background: #231e2c;
   color: #F3F3F3;
   border: none;
+  border-top: solid 1px white;
   margin-top: 0;
   display: flex;
   justify-content: space-between;
@@ -7960,6 +7961,14 @@ body .page-header {
     display: none;
   }
 }
+.page-node-type-landing-page .main-container .paragraph--type--banner-video .field--name-field-banner-image {
+  display: none;
+}
+@media (max-width: 768px) {
+  .page-node-type-landing-page .main-container .paragraph--type--banner-video .field--name-field-banner-image {
+    display: block;
+  }
+}
 .page-node-type-landing-page .main-container .paragraph--type--text {
   position: relative;
   width: 80%;
@@ -8098,7 +8107,7 @@ body .page-header {
 }
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row {
   background: #F3F3F3;
-  color: #2b3a52;
+  color: #231e2c;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -8107,7 +8116,7 @@ body .page-header {
 }
 .page-node-type-landing-page .main-container .field--name-field-view-reference .view-list-gig-home .views-row .views-field a {
   height: 100%;
-  color: #2b3a52;
+  color: #231e2c;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -8349,7 +8358,7 @@ body .page-header {
   display: flex;
   flex-flow: column nowrap;
   gap: 12.5px;
-  color: #2b3a52;
+  color: #231e2c;
   padding: 25px;
 }
 .page-node-type-gig-page .view-list-upcoming-gigs .view-content .views-row .content .text .field--name-field-location {
@@ -8553,6 +8562,33 @@ body .page-header {
      object-fit: contain;
   background: transparent;
 }
+.page-node-type-photos-page .main-container .view-list-gallery .pager-nav,
+.page-node-type-photos-page .main-container .view-list-media-gallery .pager-nav {
+  margin: 25px 35px;
+}
+.page-node-type-photos-page .main-container .view-list-gallery .pager-nav .pagination,
+.page-node-type-photos-page .main-container .view-list-media-gallery .pager-nav .pagination {
+  border-radius: 0;
+}
+.page-node-type-photos-page .main-container .view-list-gallery .pager-nav .pagination .pager__item--first,
+.page-node-type-photos-page .main-container .view-list-media-gallery .pager-nav .pagination .pager__item--first {
+  display: none;
+}
+.page-node-type-photos-page .main-container .view-list-gallery .pager-nav .pagination .pager__item--previous,
+.page-node-type-photos-page .main-container .view-list-media-gallery .pager-nav .pagination .pager__item--previous {
+  display: none;
+}
+.page-node-type-photos-page .main-container .view-list-gallery .pager-nav .pagination .pager__item a,
+.page-node-type-photos-page .main-container .view-list-media-gallery .pager-nav .pagination .pager__item a {
+  color: #17141d;
+  border-radius: 0;
+}
+.page-node-type-photos-page .main-container .view-list-gallery .pager-nav .pagination .pager__item.is-active a,
+.page-node-type-photos-page .main-container .view-list-media-gallery .pager-nav .pagination .pager__item.is-active a {
+  background-color: #F3F3F3;
+  border-color: #F3F3F3;
+  color: #17141d;
+}
 
 .user-logged-in .photos-page .modal-wrapper .close {
   top: 85px !important;
@@ -8662,7 +8698,7 @@ body .page-header {
   gap: 25px;
   width: 67%;
   background-color: #F3F3F3;
-  color: #2b3a52;
+  color: #231e2c;
   padding: 50px;
   font-size: 18px;
   justify-content: center;
@@ -8789,7 +8825,7 @@ body .page-header {
   text-align: center;
   line-height: 50px;
   font-size: 15px;
-  background-color: #2b3a52;
+  background-color: #231e2c;
   border-color: #17141d;
   color: #FFF;
   transition: all 0.3s;
@@ -8932,7 +8968,7 @@ body .page-header {
   text-align: center;
   line-height: 50px;
   font-size: 15px;
-  background-color: #2b3a52;
+  background-color: #231e2c;
   border-color: #17141d;
   color: #FFF;
   transition: all 0.3s;
@@ -8993,10 +9029,11 @@ body .page-header {
   text-transform: uppercase;
   font-weight: 600;
   transition: top 0.3s;
-  background: #2b3a52;
+  background: #231e2c;
   opacity: 0.9;
   border-style: none;
   border-radius: 0;
+  border-bottom: solid 1px white;
 }
 #navbar .navbar-header {
   margin: auto 0;
@@ -9098,7 +9135,7 @@ body .page-header {
   }
   #navbar .navbar-header .region-navigation {
     flex: 100%;
-    background: #2b3a52;
+    background: #231e2c;
     height: unset;
   }
   #navbar .navbar-header .region-navigation .logo {
@@ -9165,7 +9202,7 @@ body .page-header {
 }
 .splash.active-splash {
   transform: scale(80);
-  background-color: #2b3a52;
+  background-color: #231e2c;
 }
 
 @media (max-width: 460px) {
