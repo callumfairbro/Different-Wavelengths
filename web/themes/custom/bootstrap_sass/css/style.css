@@ -9130,7 +9130,7 @@ body .page-header {
     align-items: center;
   }
   #navbar .navbar-header .navbar-brand {
-    padding-right: 59px;
+    padding-right: 59px !important;
     letter-spacing: 3px;
   }
   #navbar .navbar-header .region-navigation {

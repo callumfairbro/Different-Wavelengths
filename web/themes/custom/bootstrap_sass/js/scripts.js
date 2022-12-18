@@ -267,7 +267,7 @@
 
           function deleteVideo() {
             if (screen.width <= 768) {
-              const video = document.querySelector('.paragraph--type--banner-video video');
+              const video = document.querySelector('.paragraph--type--banner-video .field--name-field-video');
               video.remove();
             }
           }
