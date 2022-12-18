@@ -236,7 +236,7 @@
             }
 
             menuToggle.addEventListener('click', e => {
-              e.preventDefault();
+              // e.preventDefault();
               isMenuOpen = !isMenuOpen;
               menuToggle.setAttribute('aria-expanded', String(isMenuOpen));
               menu.hidden = !isMenuOpen;
@@ -269,6 +269,8 @@
             if (screen.width <= 768) {
               const video = document.querySelector('.paragraph--type--banner-video .field--name-field-video');
               video.remove();
+              const image = document.querySelector('.paragraph--type--banner-video .field--name-field-banner-image');
+              image.classList.add("mobile");
             }
           }
 

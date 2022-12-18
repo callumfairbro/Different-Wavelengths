@@ -7964,6 +7964,9 @@ body .page-header {
 .page-node-type-landing-page .main-container .paragraph--type--banner-video .field--name-field-banner-image {
   display: none;
 }
+.page-node-type-landing-page .main-container .paragraph--type--banner-video .field--name-field-banner-image.mobile {
+  display: block !important;
+}
 @media (max-width: 768px) {
   .page-node-type-landing-page .main-container .paragraph--type--banner-video .field--name-field-banner-image {
     display: block;

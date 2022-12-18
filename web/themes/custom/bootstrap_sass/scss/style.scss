@@ -217,6 +217,9 @@ body {
       }
       .field--name-field-banner-image {
         display: none;
+        &.mobile {
+          display: block !important;
+        }
         @media(max-width:$screen-tablet) {
           display: block;
         }
