@@ -274,8 +274,6 @@
 
           $(window).on('load', function() {
             deleteVideo();
-            addJsScroll();
-            homeScroll();
             intialTopLine();
             menuAnimation();
             imageModal();
@@ -287,6 +285,8 @@
 
           $(document).ready(function() {
             mobileMenu();
+            addJsScroll();
+            homeScroll();
           })
 
         }
