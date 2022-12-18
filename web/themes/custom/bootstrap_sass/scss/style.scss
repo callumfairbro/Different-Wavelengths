@@ -1455,12 +1455,16 @@ body {
   }
     
   svg {
-    .line-top {
-      width: 100%;
-      background-color: #17141d;
-    }
-    .line-bottom {
-      width: 100%;
+    // .line-top {
+    //   width: 100%;
+    //   background-color: #17141d;
+    // }
+    // .line-bottom {
+    //   width: 100%;
+    //   overflow: visible;
+    // }
+    &.line-bottom {
+      overflow: visible;
     }
   }
  
@@ -1502,7 +1506,7 @@ body {
         background: $almost-black;
         height: unset;
         .logo {
-          margin: 10px 0;
+          margin: 10px;
         }
       }
     }

@@ -9007,12 +9007,8 @@ body .page-header {
 #navbar .navbar-collapse #block-bootstrap-sass-main-menu .line-dash {
   display: none;
 }
-#navbar svg .line-top {
-  width: 100%;
-  background-color: #17141d;
-}
-#navbar svg .line-bottom {
-  width: 100%;
+#navbar svg.line-bottom {
+  overflow: visible;
 }
 #navbar polygon {
   stroke-width: 2px;
@@ -9047,7 +9043,7 @@ body .page-header {
     height: unset;
   }
   #navbar .navbar-header .region-navigation .logo {
-    margin: 10px 0;
+    margin: 10px;
   }
   #navbar .navbar-collapse {
     border: none;

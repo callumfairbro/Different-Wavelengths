@@ -59,6 +59,9 @@
             var lineTop = document.querySelector('#block-bootstrap-sass-main-menu .line-top');
             lineTop.setAttribute("width", lineTopWidth); 
 
+            var lineBottom = document.querySelector('#block-bootstrap-sass-main-menu .line-bottom');
+            lineBottom.setAttribute("width", lineTopWidth); 
+
             lineDash = document.querySelector('#block-bootstrap-sass-main-menu .line-top .line-dash');
             lineDash.setAttribute("x2", lineTopWidth);
             lineDash.style.strokeDasharray = "141px," + lineTopWidth + "px";
@@ -85,6 +88,10 @@
             const lbs = document.querySelectorAll(".lb");
             const ul = document.querySelector("#block-bootstrap-sass-main-menu ul");
             const lineDash = document.querySelector(".line-dash");
+
+            for(i = 0; i < lbs.length; i++) {
+              point1 = 23 + (250 * i);
+            }
 
             // Pixels
             var dashOrigin = undefined;
