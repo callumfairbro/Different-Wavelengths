@@ -3,7 +3,7 @@
         attach: function (context, settings) {
 
           function imageModal() {
-            $('.field--name-field-image').on('click', function() {
+            $('.field--name-field-image','.field--name-field-media-image').on('click', function() {
                 var modal = $(this).find('.modal');
                 var src = $(this).find('img').attr('src');
                 $(modal).find('img').attr('src', src);
@@ -14,17 +14,17 @@
                     modal.removeClass('active');
                 })
             })
-            $('.field--name-field-media-image').on('click', function() {
-              var modal = $(this).find('.modal');
-              var src = $(this).find('img').attr('src');
-              $(modal).find('img').attr('src', src);
-              modal.addClass('active');
-              $('.modal .close').on('click', function(e) {
-                  e.stopPropagation();
-                  var modal = $(this).closest('.active');
-                  modal.removeClass('active');
-              })
-          })
+          //   $('.field--name-field-media-image').on('click', function() {
+          //     var modal = $(this).find('.modal');
+          //     var src = $(this).find('img').attr('src');
+          //     $(modal).find('img').attr('src', src);
+          //     modal.addClass('active');
+          //     $('.modal .close').on('click', function(e) {
+          //         e.stopPropagation();
+          //         var modal = $(this).closest('.active');
+          //         modal.removeClass('active');
+          //     })
+          // })
           }
 
           // Variable for menu scroll method
@@ -226,38 +226,14 @@
           function mobileMenu() {
             const nav = document.querySelector('#block-bootstrap-sass-main-menu');
             const splash = document.querySelector('.splash');
-            const menu = document.querySelector('.menu--main');
             const menuToggle = document.querySelector('.navbar-toggle');
-            const navBarCollapse = document.querySelector('#navbar-collapse');
+            const body = document.querySelector('body');
 
             menuToggle.onclick = function() {
-              var collapsed = navBarCollapse.classList.contains('closed');
-              menuToggle.setAttribute('aria-expanded', String(collapsed));
-              menu.hidden = !collapsed;
-              navBarCollapse.classList.toggle('closed');
               nav.classList.toggle('open');
               splash.classList.toggle('active-splash');
+              body.classList.toggle('fixed');
             };
-
-
-            nav.addEventListener('keydown', e => {
-              if (!isMenuOpen || e.ctrlKey || e.metaKey || e.altKey) {
-                return;
-              }
-              
-              const menuLinks = menu.querySelectorAll('.link');
-              if (e.keyCode === 9) {
-                if (e.shiftKey) {
-                  if (document.activeElement === menuLinks[0]) {
-                    menuToggle.focus();
-                    e.preventDefault();
-                  }
-                } else if (document.activeElement === menuToggle) {
-                  menuLinks[0].focus();
-                  e.preventDefault();
-                }
-              }
-            });
           }
 
           $(window).on('load', function() {

@@ -42,6 +42,9 @@ body {
   opacity: 1;
   max-width: 100%;
   margin-top: 0;
+  &.fixed {
+    position: fixed;
+  }
 
   .col-sm-12 {
     padding: 0;
@@ -1389,13 +1392,6 @@ body {
       .icon-bar {
         background-color: white !important;
       }
-      // &:hover {
-      //   background-color: none !important;
-      //   .icon-bar {
-      //     background-color: white !important;
-      //     transition: background-color 1s;
-      //   }
-      // }
     }    
   }
   .splash {
