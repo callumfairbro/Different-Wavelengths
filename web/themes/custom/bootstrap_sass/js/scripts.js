@@ -265,7 +265,17 @@
             });
           }
 
+          function deleteVideo() {
+            if (screen.width <= 768) {
+              const video = document.querySelector('.paragraph--type--banner-video video');
+              video.remove();
+            }
+          }
+
           $(window).on('load', function() {
+            deleteVideo();
+            addJsScroll();
+            homeScroll();
             intialTopLine();
             menuAnimation();
             imageModal();
@@ -276,8 +286,6 @@
           })
 
           $(document).ready(function() {
-            addJsScroll();
-            homeScroll();
             mobileMenu();
           })
 
