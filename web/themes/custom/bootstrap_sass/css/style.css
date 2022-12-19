@@ -7805,9 +7805,6 @@ body {
   max-width: 100%;
   margin-top: 0;
 }
-body.fixed {
-  position: fixed;
-}
 body .col-sm-12 {
   padding: 0;
 }
@@ -9194,6 +9191,11 @@ body .page-header {
 .splash.active-splash {
   transform: scale(80);
   background-color: #231e2c;
+}
+@media (min-width: 1200px) {
+  .splash.active-splash {
+    display: none;
+  }
 }
 
 @media (max-width: 460px) {

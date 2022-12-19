@@ -192,12 +192,10 @@
             const nav = document.querySelector('#block-bootstrap-sass-main-menu');
             const splash = document.querySelector('.splash');
             const menuToggle = document.querySelector('.navbar-toggle');
-            const body = document.querySelector('body');
 
             menuToggle.onclick = function() {
               nav.classList.toggle('open');
               splash.classList.toggle('active-splash');
-              body.classList.toggle('fixed');
             };
           }
 

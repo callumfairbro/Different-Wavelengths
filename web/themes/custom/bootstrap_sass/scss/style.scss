@@ -42,16 +42,13 @@ body {
   opacity: 1;
   max-width: 100%;
   margin-top: 0;
-  &.fixed {
-    position: fixed;
-  }
 
   .col-sm-12 {
     padding: 0;
   }
 
   .main-container {
-    overflow: hidden;
+    overflow: hidden;  
   }
 
   .footer {
@@ -1413,6 +1410,9 @@ body {
     &.active-splash {
       transform: scale(80);
       background-color: $almost-black;
+      @media(min-width: $screen-desktop) {
+        display: none;
+      }
     }
 
   } 
