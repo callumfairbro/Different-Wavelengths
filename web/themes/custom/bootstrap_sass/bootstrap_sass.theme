@@ -25,13 +25,16 @@ function bootstrap_sass_preprocess_paragraph(&$variables) {
         }
     }
 
+    $variables['mobile']['#cache']['max-age'] = 0;
     $parentBundle = $paragraph->bundle();
     if($parentBundle == 'banner_video') {
         $md = \Drupal::service('mobile_detect');
         if($md->isMobile()) {
             $variables['mobile'] = true;
+        } else {
+            $variables['mobile'] = false;
         }
-    }
+    }   
     
 }
 
@@ -53,11 +56,14 @@ function bootstrap_sass_preprocess_block(&$variables) {
             $variables['polygon_array'][$i] = $polygon;
         }
         $counter = 0;
+        $variables['offset'] = -23;
         foreach($variables['content']['#items'] as $value) {
             if($value['in_active_trail']) {
                 $variables['offset'] = -23 - $counter * 187;
+                break;
             }
             $counter++;
         }
+        
     }
 }

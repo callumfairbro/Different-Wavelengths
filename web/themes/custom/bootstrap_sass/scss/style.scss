@@ -49,6 +49,22 @@ body {
 
   .main-container {
     overflow: hidden;  
+
+    .paragraph--type--banner {
+      .field--name-field-banner-image {
+        img {
+          width: 100%;
+          aspect-ratio: 16/5;
+          object-fit: cover;
+          @media(max-width: $screen-desktop) {
+            aspect-ratio: 16/7;
+          }
+          @media(max-width: $screen-tablet) {
+            aspect-ratio: 1/1;
+          }
+        }
+      }
+    }
   }
 
   .footer {
@@ -240,6 +256,9 @@ body {
         height: 2px;
         width: 50%;
         background: white;
+        @media(max-width:$screen-mobile) {
+          display: none;;
+        }
       }
       &::after {
         content: "";
@@ -276,13 +295,16 @@ body {
 
     .field--name-field-view-reference {
       width: 80%;
-      margin: 100px auto;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: column;
+      gap: 100px;
       @media(max-width: $screen-desktop) {
         width: 100%;
       }
       .view-list-gig-home,
       .view-list-media-home {
-        margin: 100px 0;
+        margin: 0;
         .view-content {
           display: flex;
           gap: 100px;
@@ -316,13 +338,15 @@ body {
         .heading {
           width: 80%;
           text-align: center;
-          margin: 50px auto;
+          margin: 0 auto;
           h1 {
             color: white;
+            margin-top: 0;
             margin-bottom: 25px;
           }
           .text {
             font-size: 18px;
+            margin-bottom: 25px;
             @media(max-width: $screen-mobile) {
               font-size: 16px;
             }
@@ -416,7 +440,7 @@ body {
   }
   .block-block-content {
     width: 80%;
-    margin: 0 auto 150px auto;
+    margin: 100px auto 150px auto;
     
     a {
       color: white;
@@ -427,12 +451,9 @@ body {
     .heading {
       width: 80%;
       text-align: center;
-      margin: 50px auto;
+      margin: 0 auto;
       @media(max-width: $screen-desktop) {
         width: 100%;
-      }
-      @media(max-width: $screen-mobile) {
-        margin: 0 auto;
       }
       h1 {
         color: white;
@@ -773,7 +794,8 @@ body {
               a {
                 background-color: $dark-grey;
                 border-color: $dark-grey;
-                color: $blue-grey;
+                color: white;
+                font-weight: bold;
               }
             }
           }
