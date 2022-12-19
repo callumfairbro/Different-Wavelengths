@@ -23,7 +23,7 @@
             // if(prevScrollpos > 5) }
             if(screen.width >= 1200) {
               var currentScrollPos = window.pageYOffset;
-              if (currentScrollPos > 50) {
+              // if (currentScrollPos > 50) {
                 if (prevScrollpos > currentScrollPos) {
                   if($('.user-logged-in').length > 0) {
                     $('#navbar').css('top','79px');
@@ -33,7 +33,7 @@
                 } else {
                   $('#navbar').css('top', '-85px');
                 }
-              }
+              // }
               prevScrollpos = currentScrollPos;
             }
           }
