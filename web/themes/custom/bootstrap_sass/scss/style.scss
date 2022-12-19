@@ -133,6 +133,9 @@ body {
           background-color: $light-grey;
           visibility: hidden;
           transition: all 0.3s ease-in-out;
+          @media(max-width: $screen-desktop) {
+            display: none;
+          }
         }
 
         span {
@@ -268,6 +271,9 @@ body {
         height: 2px;
         width: 50%;
         background: white;
+        @media(max-width:$screen-mobile) {
+          display: none;;
+        }
       }
       .field--name-field-text {
         width: 80%;

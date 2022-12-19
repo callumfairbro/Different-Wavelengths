@@ -7890,6 +7890,11 @@ body .footer .region-footer a:before {
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 1200px) {
+  body .footer .region-footer a:before {
+    display: none;
+  }
+}
 body .footer .region-footer a span {
   display: none;
 }
@@ -8018,6 +8023,11 @@ body .page-header {
   height: 2px;
   width: 50%;
   background: white;
+}
+@media (max-width: 489px) {
+  .page-node-type-landing-page .main-container .paragraph--type--text::after {
+    display: none;
+  }
 }
 .page-node-type-landing-page .main-container .paragraph--type--text .field--name-field-text {
   width: 80%;
