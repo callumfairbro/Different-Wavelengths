@@ -24,24 +24,40 @@ function bootstrap_sass_preprocess_paragraph(&$variables) {
             $variables['left'] = false;
         }
     }
+
+    $parentBundle = $paragraph->bundle();
+    if($parentBundle == 'banner_video') {
+        $md = \Drupal::service('mobile_detect');
+        if($md->isMobile()) {
+            $variables['mobile'] = true;
+        }
+    }
+    
 }
 
 /**
- * Implements hook_preprocess_field().
+ * Implements hook_preprocess_block().
 */
-// function bootstrap_sass_preprocess_field(&$variables, $hook) {
-//     $element = $variables['element'];
-//     if (isset($element['#field_name'])) {
-//       if ($element['#field_name'] == 'field_video') {
-//         // dump($element["#items"]->first());
-//         // exit;
-//         $referenceItem = $element["#items"]->first();
-//         $entityReference = $referenceItem->get('entity');
-//         $entityAdapter = $entityReference->getTarget();
-//         $referencedEntity = $entityAdapter->getValue();
-//         // dump($referencedEntity->getFileUri());
-//         // exit;
-//         // $variables['classes_array'][] = 'aClassName';
-//       }
-//     }
-//   }
+function bootstrap_sass_preprocess_block(&$variables) {
+    if ($variables['plugin_id'] == 'system_menu_block:main') {
+        $length = count($variables['content']['#items']);
+        $variables['width'] = $length * 187;
+        $variables['polygon_array'] = [];
+        for($i = 0; $i < $length; $i++) {
+            $point1 = 23 + ($i * 187);
+            $point2 = $point1 + 60.5;
+            $point3 = $point2 + 10;
+            $point4 = $point3 + 10;
+            $point5 = $point4 + 60.5;
+            $polygon = $point1 . ",53 " . $point2 . ",53 " . $point3 . ",43 " . $point4 . ",53 " . $point5 . ",53";
+            $variables['polygon_array'][$i] = $polygon;
+        }
+        $counter = 0;
+        foreach($variables['content']['#items'] as $value) {
+            if($value['in_active_trail']) {
+                $variables['offset'] = -23 - $counter * 187;
+            }
+            $counter++;
+        }
+    }
+}

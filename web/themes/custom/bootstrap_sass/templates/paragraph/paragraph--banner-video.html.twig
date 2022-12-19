@@ -47,9 +47,9 @@
 
 <div{{ attributes.addClass(classes) }}>
     {{ content.field_banner_title }}
-    {% if not is_mobile() %}
-        {{ content.field_video }}
+    {% if mobile %}
+      {{ content.field_banner_image }}  
     {% else %}
-        {{ content.field_banner_image }}
+      {{ content.field_video }}
     {% endif %}
 </div>

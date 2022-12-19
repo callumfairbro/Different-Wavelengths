@@ -35,31 +35,26 @@
 #}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.removeClass('clearfix')|without('role', 'aria-labelledby') }}>
-  {# Label. If not displayed, we still provide it for screen readers. #}
   {% if not configuration.label_display %}
     {% set title_attributes = title_attributes.addClass('sr-only') %}
   {% endif %}
   <h2{{ title_attributes.setAttribute('id', heading_id) }}>{{ configuration.label }}</h2>
   {% block content %}
-    {# <svg class="line-top" height="15" viewbox="0,0 1000,20"> #}
-    <svg class="line-top" height="15">
+    <svg class="line-top" width="{{ width }}" height="15">
       <line
         class="line-dash"
         x1="0"
         y1="15"
-        x2="1000"
+        x2="{{ width }}"
         y2="15"
-        style="stroke: orange; stroke-width:2; stroke-linecap:round; stroke-dasharray: 141,2000; stroke-dashoffset: -35;"
+        style="stroke: orange; stroke-width:2; stroke-linecap:round; stroke-dasharray: 141,{{ width }}; stroke-dashoffset: {{ offset }};"
       />
     </svg>
     {{ content }}
-    {# <svg class="line-bottom" width="750" height="30" viewbox="0,0 1000,40"> #}
-    <svg class="line-bottom" width="750" height="30">
-      <polygon class="lb" points="23,53 83.5,53 93.5,43 103.5,53 164,53" />
-      <polygon class="lb" points="210,53 270.5,53 280.5,43 290.5,53 351,53" />
-      <polygon class="lb" points="397,53 457.5,53 467.5,43 477.5,53 538,53" />
-      <polygon class="lb" points="584,53 634.5,53 644.5,43 654.5,53 725,53" />
-      <polygon class="lb" points="771,53 831.5,53 841.5,43 851.5,53 912,53" />
-  </svg>
+    <svg class="line-bottom" width="{{ width }}" height="30">
+      {% for polygon in polygon_array %}
+        <polygon class='lb' points='{{ polygon }}' />
+      {% endfor %}
+    </svg>
   {% endblock %}
 </nav>

@@ -164,6 +164,11 @@ body {
       }
     }
   }
+  #navbar {
+    @media(max-width: $screen-desktop) {
+      top: 39px !important;
+    }
+  }
 }
 
 // Home page
@@ -769,8 +774,8 @@ body {
             }
             &.is-active {
               a {
-                background-color: $light-grey;
-                border-color: $light-grey;
+                background-color: $dark-grey;
+                border-color: $dark-grey;
                 color: $blue-grey;
               }
             }
@@ -1285,9 +1290,6 @@ body {
           }       
         }    
       }
-      .line-dash {
-        display: none;
-      }
     }
   }
     
@@ -1378,6 +1380,9 @@ body {
             right: 0;
             transition-duration: 0.5s;
           }
+        }
+        .line-dash {
+          display: none;
         }
       }
     }
