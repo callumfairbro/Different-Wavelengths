@@ -7854,8 +7854,22 @@ body .footer .socials {
   display: flex;
   justify-content: flex-end;
 }
-body .footer .socials img {
+body .footer .socials .socials-wrapper {
+  display: flex;
+  flex-flow: column;
+}
+body .footer .socials .socials-wrapper a {
+  display: flex;
+  justify-content: center;
+}
+body .footer .socials .socials-wrapper a img {
   height: 50px;
+}
+body .footer .socials .socials-wrapper a .insta {
+  height: 60px;
+}
+body .footer .socials .socials-wrapper a .tiktok {
+  height: 60px;
 }
 body .footer .region-footer {
   margin: auto;

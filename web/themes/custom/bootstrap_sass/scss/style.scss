@@ -95,9 +95,24 @@ body {
       width: 33%;
       display: flex;
       justify-content: flex-end;
-      img {
-        height: 50px;
+      .socials-wrapper {
+        display: flex;
+        flex-flow: column;
+        a {
+          display: flex;
+          justify-content: center;
+          img {
+            height: 50px;
+          }
+          .insta {
+            height: 60px;
+          }
+          .tiktok {
+            height: 60px;
+          }
+        }
       }
+      
     }
 
     .region-footer {
