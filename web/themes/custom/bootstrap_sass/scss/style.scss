@@ -54,7 +54,7 @@ body {
       .field--name-field-banner-image {
         img {
           width: 100%;
-          aspect-ratio: 16/5;
+          aspect-ratio: 16/6;
           object-fit: cover;
           @media(max-width: $screen-desktop) {
             aspect-ratio: 16/7;
@@ -205,6 +205,12 @@ body {
 
       position: relative;
       margin-bottom: 50px;
+
+      .field--name-field-banner-image {
+        img {
+          object-position: top;
+        }
+      }
 
       .field--name-field-banner-title {
         position: absolute;

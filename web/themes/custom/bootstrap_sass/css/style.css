@@ -7813,7 +7813,7 @@ body .main-container {
 }
 body .main-container .paragraph--type--banner .field--name-field-banner-image img {
   width: 100%;
-  aspect-ratio: 16/5;
+  aspect-ratio: 16/6;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -7946,6 +7946,10 @@ body .page-header {
 .page-node-type-landing-page .main-container .paragraph--type--banner {
   position: relative;
   margin-bottom: 50px;
+}
+.page-node-type-landing-page .main-container .paragraph--type--banner .field--name-field-banner-image img {
+  -o-object-position: top;
+     object-position: top;
 }
 .page-node-type-landing-page .main-container .paragraph--type--banner .field--name-field-banner-title {
   position: absolute;
