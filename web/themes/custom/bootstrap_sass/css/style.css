@@ -8001,6 +8001,7 @@ body .page-header {
 }
 .page-node-type-landing-page .main-container .paragraph--type--text .field--name-field-video video {
   width: 100%;
+  max-width: 800px;
 }
 .page-node-type-landing-page .main-container .paragraph--type--text a {
   color: white;

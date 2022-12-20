@@ -254,6 +254,7 @@ body {
       .field--name-field-video {
         video {
           width: 100%;
+          max-width: 800px;
         }
       }
       a {
