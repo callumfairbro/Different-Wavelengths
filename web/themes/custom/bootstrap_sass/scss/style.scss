@@ -201,10 +201,12 @@ body {
       }
     }
 
-    .paragraph--type--banner-video {
+    .paragraph--type--banner {
+
       position: relative;
+      margin-bottom: 50px;
+
       .field--name-field-banner-title {
-        width: fit-content;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -221,60 +223,22 @@ body {
         padding: 25px 50px;
         z-index: 10;
         @media(max-width: $screen-tablet) {
-          font-size: 32px;          
+          font-size: 32px;
         }
         @media(max-width: $screen-mobile) {
           padding: 5px 10px;
         }
       }
-      div {
-        width: 100%;
-        video {
-          width: 100%;
-        }
-      }
-      .field--name-field-banner-image {
-        display: block;
-      }
-    } 
+    }
 
     .paragraph--type--text {
       position: relative;
       width: 80%;
-      margin: 150px auto 150px auto;
-      @media(max-width: $screen-mobile) {
-        margin: 75px auto;
-        &::before {
-          content: none;
-        }
-        &::after {
-          content: none;
-        }
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: -50px;
-        left: 25%;
-        height: 2px;
-        width: 50%;
-        background: white;
-        @media(max-width:$screen-mobile) {
-          display: none;;
-        }
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -50px;
-        left: 25%;
-        height: 2px;
-        width: 50%;
-        background: white;
-        @media(max-width:$screen-mobile) {
-          display: none;;
-        }
-      }
+      display: flex;
+      flex-flow: column;
+      gap: 50px;
+      align-items: center;
+      margin: 100px auto 50px auto;
       .field--name-field-text {
         width: 80%;
         margin: auto;
@@ -285,6 +249,11 @@ body {
         }
         @media(max-width: $screen-desktop) {
           font-size: 16px;
+        }
+      }
+      .field--name-field-video {
+        video {
+          width: 100%;
         }
       }
       a {
@@ -304,13 +273,13 @@ body {
       margin: 0 auto;
       display: flex;
       flex-flow: column;
-      gap: 100px;
+      // gap: 100px;
       @media(max-width: $screen-desktop) {
         width: 100%;
       }
       .view-list-gig-home,
       .view-list-media-home {
-        margin: 0;
+        margin: 50px 0;
         .view-content {
           display: flex;
           gap: 100px;
@@ -446,8 +415,8 @@ body {
   }
   .block-block-content {
     width: 80%;
-    margin: 100px auto 150px auto;
-    
+    // margin: 100px auto 150px auto;
+    margin: 50px auto 100px auto;
     a {
       color: white;
       &:hover {
@@ -788,7 +757,7 @@ body {
           .pager__item--first {
             display: none;
           }
-          .pager__item--previous {
+          .pager__item--last {
             display: none;
           }
           .pager__item {
@@ -1254,9 +1223,6 @@ body {
   border-style: none;
   border-radius: 0;
   border-bottom: solid 1px white;
-  // -webkit-box-shadow: #333 1px 3px 4px;
-  // -moz-box-shadow: #333 1px 3px 4px;
-  // box-shadow: #333 1px 3px 4px;
 
   .navbar-header {
     margin: auto 0;

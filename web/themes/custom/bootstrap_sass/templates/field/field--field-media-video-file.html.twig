@@ -40,7 +40,8 @@
 #}
 
 {% for item in items %}
-    <video muted autoplay loop preload="none">
+    {# <video muted autoplay loop preload="none"> #}
+    <video controls>
         <source src="{{item.content['#files'][0]['source_attributes']['src']}}" type="video/mp4" />
     </video>
 {% endfor %}

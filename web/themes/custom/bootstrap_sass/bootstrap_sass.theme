@@ -24,18 +24,18 @@ function bootstrap_sass_preprocess_paragraph(&$variables) {
             $variables['left'] = false;
         }
     }
-
-    $variables['mobile']['#cache']['max-age'] = 0;
-    $parentBundle = $paragraph->bundle();
-    if($parentBundle == 'banner_video') {
-        $md = \Drupal::service('mobile_detect');
-        if($md->isMobile()) {
-            $variables['mobile'] = true;
-        } else {
-            $variables['mobile'] = false;
-        }
-    }   
     
+    // $parentBundle = $paragraph->bundle();
+    // if($parentBundle == 'banner_video') {
+    //     $md = \Drupal::service('mobile_detect');
+    //     if($md->isMobile()) {
+    //         $variables['mobile'] = true;
+    //     } else {
+    //         $variables['mobile'] = false;
+    //     }
+    //     $variables['mobile']['#cache']['max-age'] = 0;
+    // }   
+
 }
 
 /**
@@ -66,3 +66,10 @@ function bootstrap_sass_preprocess_block(&$variables) {
         }
     }
 }
+
+/**
+ * Implements hook_preprocess_image().
+*/
+function bootstrap_sass_preprocess_image(&$variables) {
+    $variables['attributes']['loading'] = 'lazy';
+    }
