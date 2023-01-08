@@ -200,8 +200,6 @@
           }
 
           $(window).on('load', function() {
-            addJsScroll();
-            homeScroll();
             intialTopLine();
             menuAnimation();
             imageModal();
@@ -212,6 +210,8 @@
           })
 
           $(document).ready(function() {
+            addJsScroll();
+            homeScroll();
             mobileMenu();
           })
 

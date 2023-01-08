@@ -991,23 +991,25 @@ body {
 
       .content-wrapper {
         display: flex;
-        flex-flow: row;
-        gap: 100px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 50px;
         margin: -100px 100px 100px 100px;
         @media(max-width: $screen-desktop) {
-          gap: 50px;
           margin: -100px 50px 100px 50px;
         }
         @media(max-width: 900px) {
-          flex-wrap: wrap;
           gap: 25px;
           margin: -75px 25px 100px 25px;
         }
         .webform {
-          width: 100%;
+          width: calc(50% - 25px);
           padding: 25px;
           background: $dark-grey;
           z-index: 10;
+          @media(max-width: 900px) {
+            width: 100%;
+          }
           .control-label {
             text-transform: uppercase;
             &:after {
@@ -1078,10 +1080,13 @@ body {
             }
           }
           .socials {
-            width: 100%;
+            width: calc(50% - 25px);
             padding: 25px;
             background: #7e7e7e;
             z-index: 10;
+            @media(max-width: 900px) {
+              width: 100%;
+            }
             .social-title {
               position: relative;
               text-transform: uppercase;
